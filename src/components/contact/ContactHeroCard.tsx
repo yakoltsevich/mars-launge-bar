@@ -5,7 +5,7 @@ import { faLocationDot, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-
 import { faInstagram, faVk, faTelegram } from "@fortawesome/free-brands-svg-icons";
 
 type Social = {
-    type: "instagram" | "vk" | "telegram" | "handle";
+    type: string;
     label: string;
     href: string;
 };
