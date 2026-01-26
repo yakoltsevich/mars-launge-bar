@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram, faVk, faTelegram } from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEnvelope, faLocationDot, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {faInstagram, faTelegram, faVk} from "@fortawesome/free-brands-svg-icons";
+import {LinkButton} from "@/components/common/LinkButton";
 
 type Social = {
     type: string;
@@ -58,10 +59,13 @@ export const ContactHeroCard = ({
                             className="h-full w-full object-cover opacity-85"
                             loading="lazy"
                         />
-                        <div className="absolute inset-0 bg-black/55" />
-                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.12),rgba(0,0,0,0.92))]" />
-                        <div className="absolute -right-20 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,170,90,0.18),rgba(255,170,90,0)_60%)] blur-3xl" />
-                        <div className="absolute right-8 top-1/2 h-[380px] w-[380px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.08),rgba(255,255,255,0)_65%)] blur-3xl" />
+                        <div className="absolute inset-0 bg-black/55"/>
+                        <div
+                            className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.12),rgba(0,0,0,0.92))]"/>
+                        <div
+                            className="absolute -right-20 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,170,90,0.18),rgba(255,170,90,0)_60%)] blur-3xl"/>
+                        <div
+                            className="absolute right-8 top-1/2 h-[380px] w-[380px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.08),rgba(255,255,255,0)_65%)] blur-3xl"/>
                     </div>
 
                     {/* header strip */}
@@ -76,34 +80,18 @@ export const ContactHeroCard = ({
                         <div className="grid gap-6 md:grid-cols-12 md:items-start">
                             <div className="md:col-span-7">
                                 <ul className="space-y-4 text-white/80">
-                                    <li className="flex items-center gap-4">
-                    <span className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-black/25 text-[#CFA57A]/80">
-                      <FontAwesomeIcon icon={faLocationDot} />
-                    </span>
-                                        <div className="text-[14px] tracking-[0.12em] uppercase">{placeCode}</div>
-                                    </li>
 
-                                    <li className="flex items-start gap-4">
-                    <span className="mt-[2px] grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-black/25 text-[#CFA57A]/80">
-                      <FontAwesomeIcon icon={faLocationDot} />
-                    </span>
-                                        <div className="text-[14px] leading-6 text-white/70">{address}</div>
+                                    <li className="flex items-center gap-4">
+                                        <LinkButton type={'phone'} value={phone}/>
                                     </li>
 
                                     <li className="flex items-center gap-4">
-                    <span className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-black/25 text-[#CFA57A]/80">
-                      <FontAwesomeIcon icon={faPhone} />
+                    <span
+                        className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-black/25 text-[#CFA57A]/80">
+                      <FontAwesomeIcon icon={faEnvelope}/>
                     </span>
-                                        <Link href={phoneHref} className="text-[14px] text-white/75 hover:text-white transition">
-                                            {phone}
-                                        </Link>
-                                    </li>
-
-                                    <li className="flex items-center gap-4">
-                    <span className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-black/25 text-[#CFA57A]/80">
-                      <FontAwesomeIcon icon={faEnvelope} />
-                    </span>
-                                        <Link href={emailHref} className="text-[14px] text-white/75 hover:text-white transition">
+                                        <Link href={emailHref}
+                                              className="text-[14px] text-white/75 hover:text-white transition">
                                             {email}
                                         </Link>
                                     </li>
@@ -111,7 +99,8 @@ export const ContactHeroCard = ({
                                     <li className="flex items-center gap-3 pt-1">
                                         {socials.map((s) => {
                                             const icon = getSocialIcon(s.type);
-
+                                            console.log('icon', icon)
+                                            console.log('faInstagram', faInstagram)
                                             return (
                                                 <a
                                                     key={`${s.type}-${s.label}`}
@@ -129,7 +118,7 @@ export const ContactHeroCard = ({
                                                 >
                                                     {icon ? (
                                                         <span className="text-[#CFA57A]/85">
-                              <FontAwesomeIcon icon={icon} />
+                              <FontAwesomeIcon icon={icon}/>
                             </span>
                                                     ) : (
                                                         <span className="text-[#CFA57A]/85">✦</span>
@@ -143,11 +132,11 @@ export const ContactHeroCard = ({
                             </div>
 
                             {/* decorative empty right side (matches layout) */}
-                            <div className="hidden md:col-span-5 md:block" />
+                            <div className="hidden md:col-span-5 md:block"/>
                         </div>
                     </div>
 
-                    <div className="pointer-events-none absolute inset-2 rounded-[24px] border border-white/5" />
+                    <div className="pointer-events-none absolute inset-2 rounded-[24px] border border-white/5"/>
                 </div>
             </div>
         </section>

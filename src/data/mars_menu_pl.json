@@ -1,134 +1,135 @@
 {
   "brand": "The Mars Lounge Bar",
+  "language": "pl",
   "menu": {
-    "craft_cocktails": [
+    "kraftowe_drinki": [
       {
         "id": 1,
         "name": "Tokyo Night",
         "price": 39,
         "volume_ml": 350,
-        "description": "Sweet and sour cocktail made with passion fruit puree, sprite, sweet cherry syrup and Japanese gin."
+        "description": "Słodko‑kwaśny koktajl przygotowany z puree z marakui, Sprite, syropem wiśniowym i japońskim ginem."
       },
       {
         "id": 2,
         "name": "Soprano",
         "price": 34,
         "volume_ml": 120,
-        "description": "Sweet cocktail made with espresso, Baileys and almond liqueur."
+        "description": "Słodki koktajl przygotowany z espresso, Baileys i likierem migdałowym."
       },
       {
         "id": 3,
-        "name": "Supernova Martini",
+        "name": "Supernova",
         "price": 38,
         "volume_ml": 150,
-        "description": "Sour cocktail made with passion fruit puree, vanilla vodka, lime juice with prosecco addition."
+        "description": "Kwaśny koktajl przygotowany z puree z marakui, wódki waniliowej, soku z limonki z dodatkiem prosecco."
       },
       {
         "id": 4,
         "name": "Onyx Peach",
         "price": 36,
         "volume_ml": 350,
-        "description": "Sweet cocktail made with rum, peach puree, pineapple juice and peach liqueur."
+        "description": "Słodki koktajl przygotowany z rumu, puree brzoskwiniowego, soku ananasowego i likieru brzoskwiniowego."
       },
       {
         "id": 5,
-        "name": "Eclipse",
+        "name": "Sirius A&B",
         "price": 37,
-        "volume_ml": 350,
-        "description": "Sour cocktail made with tequila, orange juice, grenadine and mint."
+        "volume_ml": 700,
+        "description": "Dwa koktajle w jednej pozycji."
       },
       {
         "id": 6,
-        "name": "Sirius A&B",
+        "name": "Eclipse",
         "price": 69,
-        "volume_ml": 700,
-        "description": "Two cocktails in one position. First is made with vodka infused by red tea, lemon sour, melon liqueur."
+        "volume_ml": 380,
+        "description": "Kwaśny koktajl przygotowany z tequili, soku pomarańczowego, grenadiny i mięty."
       }
     ],
-    "world_classic": [
+    "klasyczne_koktajle_swiata": [
       {
         "id": 1,
         "name": "Aperol",
         "price": 38,
         "volume_ml": 300,
-        "description": "Sweet and bitter classic drink made with Aperol, sparkling water and prosecco."
+        "description": "Słodko‑gorzki klasyczny napój przygotowany z Aperolu, wody gazowanej i prosecco."
       },
       {
         "id": 2,
         "name": "Boulevardier",
         "price": 40,
         "volume_ml": 120,
-        "description": "Strong bitter cocktail made with bourbon, Martini Rosso and Campari."
+        "description": "Mocny gorzki koktajl przygotowany z bourbona, Martini Rosso i Campari."
       },
       {
         "id": 3,
         "name": "Cuba Libre",
         "price": 33,
         "volume_ml": 350,
-        "description": "Sweet and sour cocktail made with rum, mint, lime juice and coke."
+        "description": "Koktajl słodko‑kwaśny przygotowany z rumu, mięty, soku z limonki i coli."
       },
       {
         "id": 4,
         "name": "Daiquiri",
         "price": 34,
         "volume_ml": 110,
-        "description": "Sour cocktail made with rum, lime juice and triple sec."
+        "description": "Kwaśny koktajl z rumem, sokiem z limonki i triple sec."
       },
       {
         "id": 5,
         "name": "God Father",
         "price": 34,
         "volume_ml": 90,
-        "description": "Sweet strong cocktail made with bourbon and almond liqueur."
+        "description": "Słodki, mocny koktajl zrobiony z bourbona i likieru migdałowego."
       },
       {
         "id": 6,
         "name": "Old Fashioned",
         "price": 36,
         "volume_ml": 75,
-        "description": "Sweet strong cocktail made with bourbon, cane sugar and Angostura."
+        "description": "Słodki, mocny koktajl przygotowany z bourbona, cukru trzcinowego i Angostury."
       },
       {
         "id": 7,
         "name": "Long Island",
         "price": 45,
         "volume_ml": 350,
-        "description": "Sweet and sour cocktail made with gin, vodka, rum, tequila, triple sec, lemon juice and coke."
+        "description": "Słodko‑kwaśny koktajl z ginu, wódki, rumu, tequili, triple sec, soku z cytryny i coli."
       },
       {
         "id": 8,
         "name": "Manhattan",
         "price": 40,
         "volume_ml": 90,
-        "description": "Bitter cocktail made with bourbon, Martini Rosso and Angostura."
+        "description": "Gorzki koktajl zrobiony z bourbona, Martini Rosso i Angostury."
       },
       {
         "id": 9,
         "name": "Margarita",
         "price": 36,
         "volume_ml": 120,
-        "description": "Sour cocktail made with tequila, triple sec and lime juice."
+        "description": "Kwaśny koktajl z tequilą, likierem triple sec i sokiem z limonki."
       },
       {
         "id": 10,
         "name": "Mojito",
         "price": 38,
         "volume_ml": 350,
-        "description": "Sour cocktail made with rum, lime juice, mint and sprite."
+        "description": "Kwaśny koktajl z rumem, sokiem z limonki, miętą i Sprite."
       },
       {
         "id": 11,
         "name": "Negroni",
         "price": 37,
         "volume_ml": 90,
-        "description": "Bitter cocktail made with gin, Campari and Martini Rosso."
+        "description": "Gorzki koktajl z ginem, Campari i Martini Rosso."
       },
       {
         "id": 12,
         "name": "Tom Collins",
         "price": 34,
         "volume_ml": 350,
-        "description": "Sour cocktail made with gin, cane sugar, lemon juice and sparkling water."
+        "description": "Kwaśny koktajl z ginem, cukrem trzcinowym, sokiem z cytryny i wodą gazowaną."
       }
     ],
     "mocktails": [
@@ -137,35 +138,35 @@
         "name": "Bumblebee",
         "price": 24,
         "volume_ml": 300,
-        "description": "Sweet and bitter mocktail made with espresso, orange juice and vanilla syrup."
+        "description": "Słodko‑gorzki mocktail przygotowany z espresso, soku pomarańczowego i syropu waniliowego."
       },
       {
         "id": 2,
         "name": "Eleanora",
         "price": 24,
         "volume_ml": 350,
-        "description": "Sweet tropical mocktail made with pineapple and apple juice, passion fruit puree and melon syrup."
+        "description": "Słodki tropikalny koktajl bezalkoholowy z soku ananasowego i jabłkowego, puree z marakui oraz syropu melonowego."
       },
       {
         "id": 3,
         "name": "Citrus Blossom",
         "price": 24,
         "volume_ml": 300,
-        "description": "Sour mocktail made with orange, lemon and lime juice, vanilla and elderflower syrup."
+        "description": "Kwaśny koktajl bezalkoholowy z sokiem z pomarańczy, cytryny i limonki, syropem waniliowym i kwiatem bzu."
       },
       {
         "id": 4,
         "name": "Orion",
         "price": 24,
         "volume_ml": 320,
-        "description": "Sweet and sour cocktail made with passion fruit puree, sprite and cherry syrup."
+        "description": "Koktajl słodko‑kwaśny z puree z marakui, Sprite i syropu wiśniowego."
       },
       {
         "id": 5,
         "name": "Stargaze",
         "price": 24,
         "volume_ml": 200,
-        "description": "Sour mocktail made with blueberry puree, pineapple and lime juice, vanilla and melon syrup."
+        "description": "Kwaśny drink bezalkoholowy z musem z borówek, sokiem z ananasa i limonki, wanilią i syropem melonowym."
       }
     ],
     "shisha": [
@@ -173,22 +174,22 @@
         "id": 1,
         "name": "Shisha Premium",
         "price": 100,
-        "description": "Choose your nicotine strength 1–7 and enjoy different flavours."
+        "description": "Wybierz swoją moc nikotyny 1–7 i ciesz się różnymi smakami."
       },
       {
         "id": 2,
         "name": "Shisha Cigarro",
         "price": 120,
-        "description": "High quality cigar leaf (no aromatic). Good, clear and mixed."
+        "description": "Wysokiej jakości liść cygara (bez aromatu). Dobry, czysty i mieszany."
       },
       {
         "id": 3,
         "name": "Shisha Parfume",
         "price": 150,
-        "description": "New wave in hookah industry. Rich, flavourfull, different."
+        "description": "Nowa fala w przemyśle fajek wodnych. Bogata, aromatyczna, inna."
       }
     ],
-    "alcohol": {
+    "alkohol": {
       "whisky": [
         {
           "name": "Bulleit",
