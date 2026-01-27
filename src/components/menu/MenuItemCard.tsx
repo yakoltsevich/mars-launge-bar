@@ -19,23 +19,17 @@ export const MenuItemCard = ({item}: Props) => {
             type="button"
             onClick={() => {
             }}
-            className="
-        group relative w-[260px] shrink-0 text-left
-        overflow-hidden rounded-[18px]
-        border border-white/10 bg-black/25
-        shadow-[0_18px_70px_rgba(0,0,0,0.65)]
-        transition
-        hover:border-white/15
+            className="group relative w-[260px] shrink-0 text-left
+        overflow-hidden rounded-[18px] border border-white/10 bg-black/25
+        shadow-[0_8px_7px_rgba(0,0,0,0.65)] transition hover:border-white/15 cursor-pointer
       "
         >
-            {/* image */}
             <div className="relative h-[138px]">
                 <img
                     src={imgSrc}
                     alt=""
                     className="h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.03]"
                 />
-                <div className="absolute inset-0 bg-black/35"/>
             </div>
 
             <div className="px-4 py-4">

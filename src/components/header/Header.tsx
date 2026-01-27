@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { NAV_LINKS, HEADER_PHONE } from "@/shared/config/nav";
-import { LogoMark } from "@/shared/ui/LogoMark";
+import {NAV_LINKS} from "@/shared/config/nav";
+import {LogoMark} from "@/shared/ui/LogoMark";
 import {LocaleSwitcher} from "@/components/common/LocaleSwitcher";
 
 export const Header = () => {
@@ -22,7 +22,7 @@ export const Header = () => {
                         aria-label="На главную"
                     >
             <span className="grid place-items-center rounded-xl border border-white/10 bg-white/5 p-2">
-              <LogoMark className="h-5 w-5" />
+              <LogoMark className="h-5 w-5"/>
             </span>
 
                         <span className="text-[12px] tracking-[0.22em] uppercase">
@@ -48,32 +48,19 @@ export const Header = () => {
                             ))}
                         </nav>
 
-                        <div className="mx-2 hidden h-6 w-px bg-white/10 md:block" />
+                        <div className="mx-2 hidden h-6 w-px bg-white/10 md:block"/>
 
-              {/*          <Link*/}
-              {/*              href={`tel:${HEADER_PHONE.replace(/[^\d+]/g, "")}`}*/}
-              {/*              className="*/}
-              {/*  rounded-xl px-3 py-2 text-[12px] tracking-[0.18em] uppercase*/}
-              {/*  text-white/80 hover:text-white hover:bg-white/5 transition*/}
-              {/*"*/}
-              {/*          >*/}
-              {/*              {HEADER_PHONE}*/}
-              {/*          </Link>*/}
-
-                        {/* Mobile menu button (пока мок) */}
                         <LocaleSwitcher></LocaleSwitcher>
                         <button
                             type="button"
-                            className="
-                ml-1 grid h-10 w-10 place-items-center rounded-xl
-                border border-white/10 bg-white/5
+                            className="ml-1 grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5
                 text-white/80 hover:text-white hover:bg-white/10 transition
                 md:hidden
               "
                             aria-label="Открыть меню"
                         >
-                            <span className="block h-[2px] w-5 bg-current opacity-90" />
-                            <span className="mt-1 block h-[2px] w-5 bg-current opacity-65" />
+                            <span className="block h-[2px] w-5 bg-current opacity-90"/>
+                            <span className="mt-1 block h-[2px] w-5 bg-current opacity-65"/>
                         </button>
                     </div>
                 </div>
