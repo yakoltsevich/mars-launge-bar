@@ -12,7 +12,7 @@ export type MenuItem = {
     categoryId: string;
     price: {
         amount: number;
-        currency: 'PLN';
+        currency: string;
     };
     nameKey: string;
     descriptionKey?: string;

@@ -1,26 +1,24 @@
 "use client";
 
 import React from "react";
+import {MenuItem} from "@/types/menu";
+import {useDict} from "@/components/i18n/I18nProvider";
+import {tByKey} from "@/shared/helpers/tByKey";
 
-export type MenuItemCardData = {
-    id: string;
-    title: string;
-    desc?: string;
-    price?: number;
-    currency?: string;
-    imageUrl: string;
-};
 
 type Props = {
-    item: MenuItemCardData;
-    onClick?: (item: MenuItemCardData) => void;
+    item: MenuItem;
 };
 
-export const MenuItemCard = ({ item, onClick }: Props) => {
+export const MenuItemCard = ({item}: Props) => {
+    const imgSrc = 'https://foodfriends.ru/assets/image-cache/files/images/old/images/ff-images/%D0%A0%D0%95%D0%A6%D0%95%D0%9F%D0%A2%D0%AB/168ed8e4d2b30c8f198d2447a59b2c14.fa022fde.jpg'
+    const dict = useDict();
+
     return (
         <button
             type="button"
-            onClick={() => onClick?.(item)}
+            onClick={() => {
+            }}
             className="
         group relative w-[260px] shrink-0 text-left
         overflow-hidden rounded-[18px]
@@ -33,29 +31,29 @@ export const MenuItemCard = ({ item, onClick }: Props) => {
             {/* image */}
             <div className="relative h-[138px]">
                 <img
-                    src={item.imageUrl}
+                    src={imgSrc}
                     alt=""
                     className="h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.03]"
                 />
-                <div className="absolute inset-0 bg-black/35" />
+                <div className="absolute inset-0 bg-black/35"/>
             </div>
 
             <div className="px-4 py-4">
                 <div className="flex justify-between gap-3">
                     <div className="line-clamp-2 text-[16px] text-white/85">
-                        {item.title}
+                        {tByKey(dict, item.nameKey)}
                     </div>
 
-                    {typeof item.price === "number" && (
+                    {item.price && (
                         <div className="text-[14px] text-white/65">
-                            {item.price} {item.currency}
+                            {item.price.amount} {item.price.currency}
                         </div>
                     )}
                 </div>
 
-                {item.desc && (
+                {item.descriptionKey && (
                     <div className="mt-3 line-clamp-2 text-[12px] text-white/45">
-                        {item.desc}
+                        {tByKey(dict, item.descriptionKey)}
                     </div>
                 )}
             </div>

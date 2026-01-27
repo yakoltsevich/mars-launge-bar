@@ -336,7 +336,7 @@
   },
   {
     "id": "bulleit",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 29,
       "currency": "PLN"
@@ -347,7 +347,7 @@
   },
   {
     "id": "glenmorangie-t-c",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 29,
       "currency": "PLN"
@@ -358,7 +358,7 @@
   },
   {
     "id": "jack-daniel-s",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 26,
       "currency": "PLN"
@@ -369,7 +369,7 @@
   },
   {
     "id": "laphroaig-d-o",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 43,
       "currency": "PLN"
@@ -380,7 +380,7 @@
   },
   {
     "id": "maker-s-mark",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 29,
       "currency": "PLN"
@@ -391,7 +391,7 @@
   },
   {
     "id": "nikka-barrel",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 60,
       "currency": "PLN"
@@ -402,7 +402,7 @@
   },
   {
     "id": "sexton",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 31,
       "currency": "PLN"
@@ -413,7 +413,7 @@
   },
   {
     "id": "talisker-10-yo",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 49,
       "currency": "PLN"
@@ -424,7 +424,7 @@
   },
   {
     "id": "tamnavulin-d-c",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 29,
       "currency": "PLN"
@@ -435,7 +435,7 @@
   },
   {
     "id": "tenjaku",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 37,
       "currency": "PLN"
@@ -446,7 +446,7 @@
   },
   {
     "id": "beefeater",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 23,
       "currency": "PLN"
@@ -457,7 +457,7 @@
   },
   {
     "id": "bombay",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 23,
       "currency": "PLN"
@@ -468,7 +468,7 @@
   },
   {
     "id": "gordon-s",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 20,
       "currency": "PLN"
@@ -479,7 +479,7 @@
   },
   {
     "id": "hendriks",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 37,
       "currency": "PLN"
@@ -490,7 +490,7 @@
   },
   {
     "id": "roku",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 26,
       "currency": "PLN"
@@ -501,7 +501,7 @@
   },
   {
     "id": "tenjaku-2",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 23,
       "currency": "PLN"
@@ -512,7 +512,7 @@
   },
   {
     "id": "bacardi",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 20,
       "currency": "PLN"
@@ -523,7 +523,7 @@
   },
   {
     "id": "bumbu",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 29,
       "currency": "PLN"
@@ -534,7 +534,7 @@
   },
   {
     "id": "kraken",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 26,
       "currency": "PLN"
@@ -545,7 +545,7 @@
   },
   {
     "id": "planteray",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 43,
       "currency": "PLN"
@@ -556,7 +556,7 @@
   },
   {
     "id": "jimador",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 22,
       "currency": "PLN"
@@ -567,7 +567,7 @@
   },
   {
     "id": "jose-cuervo",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 20,
       "currency": "PLN"
@@ -578,7 +578,7 @@
   },
   {
     "id": "patron",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 45,
       "currency": "PLN"
@@ -589,7 +589,7 @@
   },
   {
     "id": "salitos",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 26,
       "currency": "PLN"
@@ -600,7 +600,7 @@
   },
   {
     "id": "grey-goose",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 23,
       "currency": "PLN"
@@ -611,7 +611,7 @@
   },
   {
     "id": "ostoya",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 23,
       "currency": "PLN"
@@ -622,7 +622,7 @@
   },
   {
     "id": "zubrowka",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 20,
       "currency": "PLN"
@@ -633,7 +633,7 @@
   },
   {
     "id": "amber-0-5",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 18,
       "currency": "PLN"
@@ -644,7 +644,7 @@
   },
   {
     "id": "ksiazenice-0-5",
-    "categoryId": "standarts",
+    "categoryId": "standards",
     "price": {
       "amount": 18,
       "currency": "PLN"

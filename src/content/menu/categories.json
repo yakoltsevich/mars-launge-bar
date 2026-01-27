@@ -42,8 +42,8 @@
     "isActive": true
   },
   {
-    "id": "standarts",
-    "titleKey": "menu.categories.standarts.title",
+    "id": "standards",
+    "titleKey": "menu.categories.standards.title",
     "order": 50,
     "isActive": true
   }

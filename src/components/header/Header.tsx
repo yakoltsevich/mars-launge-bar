@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { NAV_LINKS, HEADER_PHONE } from "@/shared/config/nav";
 import { LogoMark } from "@/shared/ui/LogoMark";
+import {LocaleSwitcher} from "@/components/common/LocaleSwitcher";
 
 export const Header = () => {
     return (
@@ -16,7 +17,7 @@ export const Header = () => {
                 >
                     {/* Left: logo */}
                     <Link
-                        href="/public"
+                        href="/"
                         className="flex items-center gap-3 px-5 text-white/90 hover:text-white transition"
                         aria-label="На главную"
                     >
@@ -60,6 +61,7 @@ export const Header = () => {
               {/*          </Link>*/}
 
                         {/* Mobile menu button (пока мок) */}
+                        <LocaleSwitcher></LocaleSwitcher>
                         <button
                             type="button"
                             className="

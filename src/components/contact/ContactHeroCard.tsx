@@ -99,8 +99,6 @@ export const ContactHeroCard = ({
                                     <li className="flex items-center gap-3 pt-1">
                                         {socials.map((s) => {
                                             const icon = getSocialIcon(s.type);
-                                            console.log('icon', icon)
-                                            console.log('faInstagram', faInstagram)
                                             return (
                                                 <a
                                                     key={`${s.type}-${s.label}`}

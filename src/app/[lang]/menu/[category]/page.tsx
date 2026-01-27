@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { MENU_MOCK } from "@/components/menu/menuMock";
 import { MenuItemCard } from "@/components/menu/MenuItemCard";
+import {MenuCategory, MenuItem} from "@/types/menu";
+import {getMenuCategories, getAllMenuItems} from "@/lib/menu";
 
 type Props = {
     params: {
@@ -9,12 +11,11 @@ type Props = {
 };
 
 export default function MenuCategoryPage({ params }: Props) {
-    // временно — простой маппинг
-    const category =
-        params.category === "craft-cocktails"
-            ? MENU_MOCK.craftCocktails
-            : null;
+    const categories: MenuCategory[] = getMenuCategories();
+    const menuItems: MenuItem[] = getAllMenuItems();
 
+    const category =categories.find(category => category.id === params.category);
+    const categoryItems =categories.find(category => category.id === params.category);
     if (!category) {
         notFound();
     }
@@ -23,7 +24,7 @@ export default function MenuCategoryPage({ params }: Props) {
         <main className="pt-24">
             <div className="mx-auto max-w-[1100px] px-4">
                 <h1 className="mb-8 text-[28px] tracking-[0.08em] text-white/85">
-                    {category.title}
+                    {category.titleKey}
                 </h1>
 
                 <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
