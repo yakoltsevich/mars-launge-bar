@@ -4,8 +4,9 @@ import {HomeIntro} from "@/components/home/HomeIntro";
 import {HomeAtmosphere} from "@/components/home/HomeAtmosphere";
 import {HomeMenuPreview} from "@/components/home/HomeMenuPreview";
 import {HomeContacts} from "@/components/home/HomeContacts";
+import {PageProps} from "@/types/page";
 
-export default async function Home({ params }: PageProps<'/[lang]'>) {
+export default async function Home({params}: PageProps) {
     const { lang } = await params;
 
     if (!hasLocale(lang)) notFound();

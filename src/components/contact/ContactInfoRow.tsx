@@ -10,7 +10,7 @@ type Props = {
 export const ContactInfoRow = ({ address, workTime }: Props) => {
     return (
         <section className="py-8">
-            <div className="mx-auto max-w-[1100px] px-4">
+            <div className="mx-auto max-w-5xl px-4">
                 <div className="rounded-[22px] border border-white/10 bg-black/25 px-8 py-6 shadow-[0_18px_70px_rgba(0,0,0,0.55)] sm:px-12">
                     <div className="grid gap-4 md:grid-cols-2">
                         <div className="flex items-start gap-4">

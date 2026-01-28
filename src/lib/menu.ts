@@ -4,8 +4,8 @@ import menuItems from '@/content/menu/items.json';
 export const getMenuCategories = () => {
     return categories;
 };
-export const getMenuCategoryById = () => {
-    return categories;
+export const getMenuCategoryById = (category: string) => {
+    return categories.find(cat => cat.id === category);
 };
 export const getAllMenuItems = () => {
     return menuItems;

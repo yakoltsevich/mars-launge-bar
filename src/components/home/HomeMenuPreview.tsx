@@ -6,7 +6,7 @@ export const HomeMenuPreview = () => {
 
     return (
         <section className="py-14">
-            <div className="mx-auto max-w-[1100px] px-4">
+            <div className="mx-auto max-w-7xl px-4">
                 <h2 className="text-center text-[24px] tracking-[0.22em] uppercase text-white/85">
                     {title}
                 </h2>

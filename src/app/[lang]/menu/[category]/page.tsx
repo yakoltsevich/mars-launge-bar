@@ -1,35 +1,35 @@
-import { notFound } from "next/navigation";
-import { MENU_MOCK } from "@/components/menu/menuMock";
-import { MenuItemCard } from "@/components/menu/MenuItemCard";
+import {notFound} from "next/navigation";
+import {MENU_MOCK} from "@/components/menu/menuMock";
+import {MenuItemCard} from "@/components/menu/MenuItemCard";
 import {MenuCategory, MenuItem} from "@/types/menu";
-import {getMenuCategories, getAllMenuItems} from "@/lib/menu";
+import {getMenuCategories, getAllMenuItems, getMenuCategoryById, getMenuItemsByCategoryId} from "@/lib/menu";
+import {useDict} from "@/components/i18n/I18nProvider";
+import {getDictionary} from "@/app/[lang]/dictionaries";
+import {tByKey} from "@/shared/helpers/tByKey";
 
-type Props = {
-    params: {
-        category: string;
-    };
+export type PageProps = {
+    params: Promise<{ lang: 'pl' | 'en', category: string }>;
 };
+export default async function MenuCategoryPage({params}: PageProps) {
+    const {lang, category} = await params;
+    const dict = await getDictionary(lang);
+    const currentCategory: MenuCategory | undefined = getMenuCategoryById(category);
+    const categoryItems: MenuItem[] = getMenuItemsByCategoryId(category);
 
-export default function MenuCategoryPage({ params }: Props) {
-    const categories: MenuCategory[] = getMenuCategories();
-    const menuItems: MenuItem[] = getAllMenuItems();
-
-    const category =categories.find(category => category.id === params.category);
-    const categoryItems =categories.find(category => category.id === params.category);
     if (!category) {
         notFound();
     }
 
     return (
         <main className="pt-24">
-            <div className="mx-auto max-w-[1100px] px-4">
+            <div className="mx-auto max-w-7xl px-4">
                 <h1 className="mb-8 text-[28px] tracking-[0.08em] text-white/85">
-                    {category.titleKey}
+                    {tByKey(dict, currentCategory?.titleKey || '')}
                 </h1>
 
-                <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                    {category.items.map((item) => (
-                        <MenuItemCard key={item.id} item={item} />
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    {categoryItems.map((item) => (
+                        <MenuItemCard key={item.id} item={item}/>
                     ))}
                 </div>
             </div>

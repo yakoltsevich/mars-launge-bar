@@ -1,13 +1,17 @@
-import { montserrat } from "@/app/[lang]/fonts/fonts";
-import type { Metadata } from "next";
-import { Header } from "@/components/header/Header";
+import {montserrat} from "@/app/[lang]/fonts/fonts";
+import type {Metadata} from "next";
+import {Header} from "@/components/header/Header";
 import "./globals.css";
-import { I18nProvider } from "@/components/i18n/I18nProvider";
-import { getDictionary, hasLocale } from "@/app/[lang]/dictionaries";
-import { notFound } from "next/navigation";
-import type { ReactNode } from "react";
+import {I18nProvider} from "@/components/i18n/I18nProvider";
+import {getDictionary, hasLocale} from "@/app/[lang]/dictionaries";
+import {notFound} from "next/navigation";
+import type {ReactNode} from "react";
 
-export const generateStaticParams = async () => [{ lang: "pl" }, { lang: "en" }];
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
+export const generateStaticParams = async () => [{lang: "pl"}, {lang: "en"}];
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -16,11 +20,11 @@ export const metadata: Metadata = {
 
 type LangLayoutProps = {
     children: ReactNode;
-    params: { lang: string };
+    params: Promise<{ lang: 'pl' | 'en' }>;
 };
 
-export default async function RootLayout({ children, params }: LangLayoutProps) {
-    const { lang } = params;
+export default async function RootLayout({children, params}: LangLayoutProps) {
+    const {lang} = await params;
 
     if (!hasLocale(lang)) notFound();
 
@@ -29,7 +33,7 @@ export default async function RootLayout({ children, params }: LangLayoutProps) 
     return (
         <html lang={lang}>
         <body className={`${montserrat.className} antialiased`}>
-        <Header />
+        <Header/>
         <I18nProvider dict={dict}>{children}</I18nProvider>
         </body>
         </html>

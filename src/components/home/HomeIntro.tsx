@@ -13,7 +13,7 @@ export const HomeIntro = () => {
 
     return (
         <section className="pt-24">
-            <div className="mx-auto max-w-[1100px] px-4">
+            <div className="mx-auto max-w-7xl px-4">
                 <div
                     className="
             relative overflow-hidden rounded-[28px]

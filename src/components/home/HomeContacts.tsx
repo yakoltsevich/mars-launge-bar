@@ -9,7 +9,7 @@ export const HomeContacts = () => {
 
     return (
         <section className="py-14">
-            <div className="mx-auto max-w-[1100px] px-4">
+            <div className="mx-auto max-w-7xl px-4">
                 <div
                     className="
             overflow-hidden rounded-[28px]

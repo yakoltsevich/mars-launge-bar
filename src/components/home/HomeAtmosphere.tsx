@@ -5,7 +5,7 @@ export const HomeAtmosphere = () => {
 
     return (
         <section className="py-14">
-            <div className="mx-auto max-w-[1100px] px-4">
+            <div className="mx-auto max-w-7xl px-4">
                 <div className="grid gap-8 md:grid-cols-12 md:items-center">
                     <div className="md:col-span-5">
                         <h2 className="text-[24px] tracking-[0.22em] uppercase text-white/85">

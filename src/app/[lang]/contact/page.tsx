@@ -1,9 +1,10 @@
-import { CONTACT_DATA } from "@/components/contact/contactData";
-import { ContactHeroCard } from "@/components/contact/ContactHeroCard";
-import { ContactInfoRow } from "@/components/contact/ContactInfoRow";
-import { GoogleMapEmbed } from "@/components/contact/GoogleMapEmbed";
+import {CONTACT_DATA} from "@/components/contact/contactData";
+import {ContactHeroCard} from "@/components/contact/ContactHeroCard";
+import {ContactInfoRow} from "@/components/contact/ContactInfoRow";
+import {GoogleMapEmbed} from "@/components/contact/GoogleMapEmbed";
+import {PageProps} from "@/types/page";
 
-export default function ContactPage() {
+export default function ContactPage({params}: PageProps) {
     return (
         <main>
             <ContactHeroCard
@@ -16,9 +17,9 @@ export default function ContactPage() {
                 heroImageUrl={CONTACT_DATA.heroImageUrl}
             />
 
-            <ContactInfoRow address={CONTACT_DATA.address} workTime={CONTACT_DATA.workTime} />
+            <ContactInfoRow address={CONTACT_DATA.address} workTime={CONTACT_DATA.workTime}/>
 
-            <GoogleMapEmbed query={CONTACT_DATA.mapQuery} />
+            <GoogleMapEmbed query={CONTACT_DATA.mapQuery}/>
         </main>
     );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope, faLocationDot, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope, faLocationDot, faLock, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faInstagram, faTelegram, faVk} from "@fortawesome/free-brands-svg-icons";
 import {LinkButton} from "@/components/common/LinkButton";
 
@@ -42,17 +42,18 @@ export const ContactHeroCard = ({
 
     return (
         <section className="pt-24">
-            <div className="mx-auto max-w-[1100px] px-4">
+            <div className="mx-auto max-w-5xl px-4 h-96 ">
+                {/* header strip */}
+                <div className="relative border-white/10  px-8 py-5 sm:px-12">
+                    <h1 className="text-center text-[22px] tracking-[0.22em] uppercase text-white/80">
+                        {title}
+                    </h1>
+                </div>
                 <div
-                    className="
-            relative overflow-hidden rounded-[28px]
-            border border-white/10
-            bg-black/35
-            shadow-[0_18px_70px_rgba(0,0,0,0.65)]
-          "
-                >
+                    className="relative overflow-hidden rounded-[28px] border border-white/10
+            bg-black/35 shadow-[0_18px_70px_rgba(0,0,0,0.65)] h-full">
                     {/* background */}
-                    <div className="absolute inset-0">
+                    <div className="absolute inset-0 ">
                         <img
                             src={heroImageUrl}
                             alt=""
@@ -68,12 +69,6 @@ export const ContactHeroCard = ({
                             className="absolute right-8 top-1/2 h-[380px] w-[380px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.08),rgba(255,255,255,0)_65%)] blur-3xl"/>
                     </div>
 
-                    {/* header strip */}
-                    <div className="relative border-b border-white/10 bg-black/25 px-8 py-5 sm:px-12">
-                        <h1 className="text-center text-[22px] tracking-[0.22em] uppercase text-white/80">
-                            {title}
-                        </h1>
-                    </div>
 
                     {/* content */}
                     <div className="relative px-8 py-10 sm:px-12">

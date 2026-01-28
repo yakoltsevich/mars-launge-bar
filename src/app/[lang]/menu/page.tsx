@@ -3,8 +3,9 @@ import {getMenuCategories, getAllMenuItems, getMenuItemsByCategoryId} from "@/li
 import {MenuCategory, MenuItem} from "@/types/menu";
 import {getDictionary} from "@/app/[lang]/dictionaries";
 import {tByKey} from "@/shared/helpers/tByKey";
+import {PageProps} from "@/types/page";
 
-export default async function MenuPage({params}) {
+export default async function MenuPage({params}: PageProps) {
     const categories: MenuCategory[] = getMenuCategories();
     const {lang} = await params;
     const dict = await getDictionary(lang);
@@ -14,7 +15,7 @@ export default async function MenuPage({params}) {
                 if (!category.isActive) return null;
                 const items = getMenuItemsByCategoryId(category.id)
                 return (
-                    <CategoryRow key={category.id} title={tByKey(dict, category.titleKey)} items={items}/>
+                    <CategoryRow key={category.id} categoryId={category.id} title={tByKey(dict, category.titleKey)} items={items}/>
                 )
             })}
         </main>

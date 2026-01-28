@@ -6,7 +6,7 @@ import {LocaleSwitcher} from "@/components/common/LocaleSwitcher";
 export const Header = () => {
     return (
         <header className="fixed left-0 top-0 z-50 w-full">
-            <div className="mx-auto max-w-[1100px] px-4 pt-4">
+            <div className="mx-auto max-w-5xl px-4 pt-4">
                 <div
                     className="
             flex h-14 items-center justify-between

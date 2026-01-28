@@ -23,7 +23,6 @@ type LinkButtonProps = {
     value: string;
 };
 export const LinkButton = ({type, value,}: LinkButtonProps) => {
-
     return (
         <div className='flex text-sm items-center gap-4'>
             <FontAwesomeIcon size='1x' icon={BTN_TYPE[type].icon}/>
