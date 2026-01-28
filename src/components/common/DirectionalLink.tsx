@@ -8,7 +8,7 @@ type Props = {
     href: string;
 };
 
-export const ViewAllLink = ({title = 'View all →', href}: Props) => {
+export const DirectionalLink = ({title = 'View all →', href}: Props) => {
     return (
         <Link href={href}
               className="rounded-xl px-3 py-2 text-[12px] tracking-[0.16em]

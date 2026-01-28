@@ -3,7 +3,7 @@
 
 import React from "react";
 import {MenuItemCard} from "./MenuItemCard";
-import {ViewAllLink} from "@/components/common/ViewAllLink";
+import {DirectionalLink} from "@/components/common/DirectionalLink";
 import {MenuItem} from "@/types/menu";
 import {usePathname} from "next/navigation";
 
@@ -14,13 +14,12 @@ type Props = {
 };
 
 export const CategoryRow = ({title, items, categoryId}: Props) => {
-    const viewAllHref = 'categoryId'
     const pathname = usePathname();
     return (
-        <div className="mx-auto flex flex-col items-start justify-center max-w-7xl">
+        <div className="mx-auto flex flex-col items-start justify-center max-w-7xl gap-2 py-2 border border-white/10 rounded-xl my-1 ">
             <div className="w-full flex items-start justify-between gap-4 px-4">
                 <h3 className="text-[22px] tracking-[0.06em] text-white/80">{title}</h3>
-                <ViewAllLink href={pathname + '/' + categoryId}/>
+                <DirectionalLink href={pathname + '/' + categoryId}/>
             </div>
 
             <div
@@ -35,7 +34,6 @@ export const CategoryRow = ({title, items, categoryId}: Props) => {
                 ))}
             </div>
 
-            <div className="h-px w-full bg-white/10"/>
         </div>
     );
 };

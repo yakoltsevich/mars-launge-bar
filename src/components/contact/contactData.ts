@@ -6,9 +6,7 @@ export const CONTACT_DATA = {
     email: "info@yourwebsite.com",
     socials: [
         { type: "instagram", label: "Instagram", href: "https://www.instagram.com/themars_bar_/" },
-        { type: "vk", label: "VK", href: "https://vk.com/" },
         { type: "telegram", label: "Telegram", href: "https://t.me/" },
-        { type: "handle", label: "/hookahLounge", href: "https://example.com" },
     ],
     workTime: "Работаем каждый день с 12:00 до 02:00",
 

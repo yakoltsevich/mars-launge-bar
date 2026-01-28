@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { HOME_MENU_PREVIEW_DATA } from "./homeMenuPreviewData";
+import {DirectionalLink} from "@/components/common/DirectionalLink";
+import React from "react";
+import {tByKey} from "@/shared/helpers/tByKey";
+import Image from "next/image";
 
 export const HomeMenuPreview = () => {
     const { title, viewAll, items } = HOME_MENU_PREVIEW_DATA;
@@ -26,18 +30,13 @@ export const HomeMenuPreview = () => {
                         >
                             {/* background image */}
                             <div className="absolute inset-0">
-                                <img
+                                <Image
                                     src={it.imageUrl}
                                     alt=""
-                                    className="
-                    h-full w-full object-cover opacity-85
-                    transition duration-500
-                    group-hover:scale-[1.03]
-                  "
-                                    loading="lazy"
+                                    fill
+                                    className="object-contain opacity-90 transition duration-500"
                                 />
                                 {/* dark overlay */}
-                                <div className="absolute inset-0 bg-black/45" />
                                 {/* vignette */}
                                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.10),rgba(0,0,0,0.92))]" />
                             </div>
@@ -59,17 +58,7 @@ export const HomeMenuPreview = () => {
                 </div>
 
                 <div className="mt-8 flex justify-center">
-                    <Link
-                        href={viewAll.href}
-                        className="
-              rounded-xl px-4 py-2
-              text-[12px] tracking-[0.18em] uppercase
-              text-white/55 hover:text-white/80
-              hover:bg-white/5 transition
-            "
-                    >
-                        {viewAll.label}
-                    </Link>
+                    <DirectionalLink href={viewAll.href} title={viewAll.label}/>
                 </div>
             </div>
         </section>

@@ -24,12 +24,15 @@ type LinkButtonProps = {
 };
 export const LinkButton = ({type, value,}: LinkButtonProps) => {
     return (
-        <div className='flex text-sm items-center gap-4'>
-            <FontAwesomeIcon size='1x' icon={BTN_TYPE[type].icon}/>
+        <div className='flex items-center gap-4'>
+            <span
+                className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-black/25 text-[#CFA57A]/80">
+                <FontAwesomeIcon icon={BTN_TYPE[type].icon}/>
+            </span>
             <Link href={BTN_TYPE[type].linkBuilder(value)}
                   className="text-[14px] text-white/75 hover:text-white transition">
                 {value}
             </Link>
         </div>
-    );
+    )
 };

@@ -1,6 +1,6 @@
 export const HOME_MENU_PREVIEW_DATA = {
     title: "МЕНЮ",
-    viewAll: { label: "Посмотреть меню... →", href: "/menu" },
+    viewAll: { label: "Посмотреть меню →", href: "/menu" },
     items: [
         {
             title: "Бар",
