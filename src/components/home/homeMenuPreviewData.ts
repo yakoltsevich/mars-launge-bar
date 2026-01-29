@@ -1,24 +1,20 @@
 export const HOME_MENU_PREVIEW_DATA = {
-    title: "МЕНЮ",
-    viewAll: { label: "Посмотреть меню →", href: "/menu" },
+    viewAll: {labelKey: "home.menuPreview.seeMenu", href: "/menu"},
     items: [
         {
-            title: "Бар",
-            href: "/menu/bar",
-            imageUrl:
-                "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80",
+            labelKey: "home.menuPreview.cards.bar",
+            href: "/menu",
+            imageUrl: "/images/common/bar2.jpg",
         },
         {
-            title: "Кальяны",
-            href: "/menu/hookah",
-            imageUrl:
-                "https://images.unsplash.com/photo-1542395975-1913c290082f?auto=format&fit=crop&w=1200&q=80",
+            labelKey: "home.menuPreview.cards.hookah",
+            href: "/menu/shisha",
+            imageUrl: "/images/common/shisha.jpg",
         },
         {
-            title: "Табак",
-            href: "/menu/tobacco",
-            imageUrl:
-                "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1200&q=80",
+            labelKey: "home.menuPreview.cards.tables",
+            href: "/tables",
+            imageUrl: "/images/common/vip-room.png",
         },
     ],
 };

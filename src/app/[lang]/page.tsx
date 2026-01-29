@@ -1,13 +1,14 @@
-import { notFound } from 'next/navigation';
-import { getDictionary, hasLocale } from './dictionaries';
+import {notFound} from 'next/navigation';
+import {getDictionary, hasLocale} from './dictionaries';
 import {HomeIntro} from "@/components/home/HomeIntro";
 import {HomeAtmosphere} from "@/components/home/HomeAtmosphere";
 import {HomeMenuPreview} from "@/components/home/HomeMenuPreview";
 import {HomeContacts} from "@/components/home/HomeContacts";
 import {PageProps} from "@/types/page";
+import {AtmosphereSlider} from "@/components/common/AtmosphereSlider";
 
 export default async function Home({params}: PageProps) {
-    const { lang } = await params;
+    const {lang} = await params;
 
     if (!hasLocale(lang)) notFound();
 
@@ -17,8 +18,9 @@ export default async function Home({params}: PageProps) {
         <main>
             <HomeIntro/>
             <HomeAtmosphere/>
-            <HomeMenuPreview />
-            <HomeContacts />
+
+            <HomeMenuPreview/>
+            <HomeContacts/>
         </main>
     );
 }

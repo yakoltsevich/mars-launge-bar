@@ -6,7 +6,7 @@ import {PageProps} from "@/types/page";
 
 export default function ContactPage({params}: PageProps) {
     return (
-        <main>
+        <main className='max-w-5xl mx-auto pt-24 flex flex-col gap-4'>
             <ContactHeroCard
                 title={CONTACT_DATA.title}
                 placeCode={CONTACT_DATA.placeCode}

@@ -764,24 +764,24 @@
     "order": 10
   },
   {
-    "id": "biscuit-lubusie",
+    "id": "biscuit-lubisie",
     "categoryId": "snacks",
     "price": {
       "amount": 4,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.biscuitLubusie.name",
+    "nameKey": "menu.items.biscuitLubisie.name",
     "isActive": true,
     "order": 20
   },
   {
-    "id": "chips-lay-s",
+    "id": "chips-lays",
     "categoryId": "snacks",
     "price": {
       "amount": 7,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.chipsLayS.name",
+    "nameKey": "menu.items.chipsLays.name",
     "isActive": true,
     "order": 30
   },

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import {NAV_LINKS} from "@/shared/config/nav";
-import {LogoMark} from "@/shared/ui/LogoMark";
 import {LocaleSwitcher} from "@/components/common/LocaleSwitcher";
+import Image from "next/image";
+import React from "react";
 
 export const Header = () => {
     return (
@@ -21,13 +22,12 @@ export const Header = () => {
                         className="flex items-center gap-3 px-5 text-white/90 hover:text-white transition"
                         aria-label="На главную"
                     >
-            <span className="grid place-items-center rounded-xl border border-white/10 bg-white/5 p-2">
-              <LogoMark className="h-5 w-5"/>
-            </span>
+                        <Image
+                            src={'/images/common/logo3.png'}
+                            width={120} height={20}
+                            alt="Logo"
+                        />
 
-                        <span className="text-[12px] tracking-[0.22em] uppercase">
-              Your Logo
-            </span>
                     </Link>
 
                     {/* Right: nav + phone */}

@@ -1,4 +1,24 @@
 {
+  "home": {
+    "intro": {
+      "title": "HOOKAH LOUNGE",
+      "subtitle": "Lounge bar. Hookah. Atmosphere.",
+      "caption": "Relax. Smoke. Stay.",
+      "buttons": {
+        "menu": "Menu",
+        "contacts": "Contacts"
+      }
+    },
+    "menuPreview": {
+      "title": "Menu preview",
+      "cards": {
+        "bar": "Bar",
+        "hookah": "Hookah",
+        "tables": "Tables"
+      },
+      "seeMenu": "See menu"
+    }
+  },
   "menu": {
     "brand": "The Mars Lounge Bar",
     "categories": {
@@ -249,10 +269,10 @@
       "7daysCroissant": {
         "name": "7Days Croissant"
       },
-      "biscuitLubusie": {
-        "name": "Biscuit Lubusie"
+      "biscuitLubisie": {
+        "name": "Biscuit Lubisie"
       },
-      "chipsLayS": {
+      "chipsLays": {
         "name": "Chips Lay’s"
       },
       "marsChocolate": {

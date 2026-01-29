@@ -1,7 +1,14 @@
+'use client'
 import {HOME_ATMOSPHERE_DATA} from "./homeAtmosphereData";
+import Image from "next/image";
+import {useDict} from "@/components/i18n/I18nProvider";
+import {HomeMenuPreview} from "@/components/home/HomeMenuPreview";
+import {HomeContacts} from "@/components/home/HomeContacts";
+import {AtmosphereSlider} from "@/components/common/AtmosphereSlider";
 
 export const HomeAtmosphere = () => {
     const {title, text, preview, imageUrl} = HOME_ATMOSPHERE_DATA;
+    const dict = useDict();
 
     return (
         <section className="py-14">
@@ -36,33 +43,37 @@ export const HomeAtmosphere = () => {
                             </div>
                         </div>
                     </div>
-
+                    <AtmosphereSlider
+                        slides={[
+                            {src: '/images/common/bar.jpg', alt: 'Mars lounge interior 1'},
+                            {src: '/images/common/bar2.jpg', alt: 'Mars lounge interior 2'},
+                            {src: '/images/common/outside.jpg', alt: 'Mars lounge interior 3'},
+                            {src: '/images/common/shisha.jpg', alt: 'Mars lounge interior 3'},
+                            {src: '/images/common/vip-room.jpg', alt: 'Mars lounge interior 3'},
+                        ]}
+                        aspect="16/9"
+                        className="w-full max-w-[620px] md:col-span-7"
+                    />
                     {/* Right image */}
-                    <div className="md:col-span-7">
-                        <div className="relative overflow-hidden rounded-[26px] border border-white/10
-                        bg-black/30 shadow-[0_18px_70px_rgba(0,0,0,0.65)]">
-                            <div className="absolute inset-0">
-                                <img
-                                    src={imageUrl}
-                                    alt=""
-                                    className="h-full w-full object-cover opacity-85"
-                                    loading="lazy"
-                                />
-                                <div className="absolute inset-0 bg-black/45"/>
-                                <div
-                                    className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.10),rgba(0,0,0,0.90))]"/>
-                                <div
-                                    className="absolute -left-24 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full
-                                    bg-[radial-gradient(circle,rgba(255,170,90,0.18),rgba(255,170,90,0)_60%)] blur-3xl"/>
-                            </div>
+                    {/*<div className="md:col-span-7">*/}
+                    {/*    <div className="relative overflow-hidden rounded-[26px] border border-white/10*/}
+                    {/*    bg-black/30 shadow-[0_18px_70px_rgba(0,0,0,0.65)]">*/}
+                    {/*        <div className="absolute inset-0">*/}
+                    {/*            <Image*/}
+                    {/*                src='/images/common/hall.png'*/}
+                    {/*                width={600} height={400}*/}
+                    {/*                alt=""*/}
+                    {/*                className="h-full w-full object-cover opacity-85"*/}
+                    {/*            />*/}
+                    {/*        </div>*/}
 
-                            {/* keep aspect similar to screenshot */}
-                            <div className="relative h-[260px] sm:h-[300px] md:h-[320px]"/>
+                    {/*        /!* keep aspect similar to screenshot *!/*/}
+                    {/*        <div className="relative h-[260px] sm:h-[300px] md:h-[320px]"/>*/}
 
-                            {/* subtle inner stroke */}
-                            <div className="pointer-events-none absolute inset-2 rounded-[22px] border border-white/5"/>
-                        </div>
-                    </div>
+                    {/*        /!* subtle inner stroke *!/*/}
+                    {/*        <div className="pointer-events-none absolute inset-2 rounded-[22px] border border-white/5"/>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </section>

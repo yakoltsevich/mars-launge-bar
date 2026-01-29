@@ -1,5 +1,10 @@
+'use client'
+
 import Link from "next/link";
-import { HOME_INTRO_DATA } from "./homeIntroData";
+import {HOME_INTRO_DATA} from "./homeIntroData";
+import Image from "next/image";
+import {useDict} from "@/components/i18n/I18nProvider";
+import {tByKey} from "@/shared/helpers/tByKey";
 
 export const HomeIntro = () => {
     const {
@@ -8,8 +13,8 @@ export const HomeIntro = () => {
         caption,
         primaryCta,
         secondaryCta,
-        bgImageUrl,
     } = HOME_INTRO_DATA;
+    const dict = useDict();
 
     return (
         <section className="pt-24">
@@ -24,33 +29,36 @@ export const HomeIntro = () => {
                 >
                     {/* Background */}
                     <div className="absolute inset-0">
-                        <img
-                            src={bgImageUrl}
+                        <Image
+                            src='/images/common/bar.jpg'
+                            width={1200} height={600}
                             alt=""
                             className="h-full w-full object-cover opacity-80"
-                            loading="lazy"
                         />
 
-                        <div className="absolute inset-0 bg-black/55" />
-                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.12),rgba(0,0,0,0.92))]" />
+                        <div className="absolute inset-0 bg-black/55"/>
+                        <div
+                            className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.12),rgba(0,0,0,0.92))]"/>
 
-                        <div className="absolute -right-24 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,170,90,0.25),rgba(255,170,90,0)_60%)] blur-2xl" />
-                        <div className="absolute right-10 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.08),rgba(255,255,255,0)_65%)] blur-3xl" />
+                        <div
+                            className="absolute -right-24 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,170,90,0.25),rgba(255,170,90,0)_60%)] blur-2xl"/>
+                        <div
+                            className="absolute right-10 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.08),rgba(255,255,255,0)_65%)] blur-3xl"/>
                     </div>
 
                     {/* Content */}
                     <div className="relative px-8 py-16 sm:px-12 sm:py-20">
                         <div className="max-w-[560px]">
                             <h1 className="text-[44px] leading-[1.05] tracking-[0.12em] uppercase text-[#E9E2D7] sm:text-[56px]">
-                                {title}
+                                {tByKey(dict, 'home.intro.title')}
                             </h1>
 
                             <p className="mt-4 text-[20px] text-white/80 sm:text-[22px]">
-                                {subtitle}
+                                {tByKey(dict, 'home.intro.subtitle')}
                             </p>
 
                             <p className="mt-6 text-[14px] tracking-[0.12em] text-white/55">
-                                {caption}
+                                {tByKey(dict, 'home.intro.caption')}
                             </p>
 
                             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -65,7 +73,7 @@ export const HomeIntro = () => {
                     transition
                   "
                                 >
-                                    {primaryCta.label}
+                                    {tByKey(dict, primaryCta.labelKey)}
                                 </Link>
 
                                 <Link
@@ -78,13 +86,13 @@ export const HomeIntro = () => {
                     transition
                   "
                                 >
-                                    {secondaryCta.label}
+                                    {tByKey(dict, secondaryCta.labelKey)}
                                 </Link>
                             </div>
                         </div>
                     </div>
 
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-white/10" />
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-white/10"/>
                 </div>
             </div>
         </section>
