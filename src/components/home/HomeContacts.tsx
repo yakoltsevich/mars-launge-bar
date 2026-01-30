@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import {getContactsInfo} from "@/lib/concacts";
+import {getContactsInfo} from "@/lib/contacts";
 import {useDict} from "@/components/i18n/I18nProvider";
 import {tByKey} from "@/shared/helpers/tByKey";
 
