@@ -1,9 +1,7 @@
 import {notFound} from "next/navigation";
-import {MENU_MOCK} from "@/components/menu/menuMock";
 import {MenuItemCard} from "@/components/menu/MenuItemCard";
 import {MenuCategory, MenuItem} from "@/types/menu";
-import {getMenuCategories, getAllMenuItems, getMenuCategoryById, getMenuItemsByCategoryId} from "@/lib/menu";
-import {useDict} from "@/components/i18n/I18nProvider";
+import {getMenuCategoryById, getMenuItemsByCategoryId} from "@/lib/menu";
 import {getDictionary} from "@/app/[lang]/dictionaries";
 import {tByKey} from "@/shared/helpers/tByKey";
 
@@ -12,6 +10,7 @@ export type PageProps = {
 };
 export default async function MenuCategoryPage({params}: PageProps) {
     const {lang, category} = await params;
+    console.log(category);
     const dict = await getDictionary(lang);
     const currentCategory: MenuCategory | undefined = getMenuCategoryById(category);
     const categoryItems: MenuItem[] = getMenuItemsByCategoryId(category);

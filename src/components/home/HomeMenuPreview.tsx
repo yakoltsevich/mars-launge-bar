@@ -10,17 +10,7 @@ import {tByKey} from "@/shared/helpers/tByKey";
 export const HomeMenuPreview = () => {
     const {viewAll, items} = HOME_MENU_PREVIEW_DATA;
     const dict = useDict();
-    const cc = {
-        "menuPreview": {
-            "title": "Menu preview",
-            "cards": {
-                "bar": "Bar",
-                "hookah": "Hookah",
-                "tables": "Tables"
-            },
-            "seeMenu": "See menu"
-        }
-    }
+
     return (
         <section className="py-14">
             <div className="mx-auto max-w-7xl px-4">

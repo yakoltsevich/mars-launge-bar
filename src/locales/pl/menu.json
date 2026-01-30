@@ -138,7 +138,7 @@
       "glenmorangieTC": {
         "name": "Glenmorangie T.C."
       },
-      "jackDanielS": {
+      "jackDaniels": {
         "name": "Jack Daniel’s"
       },
       "laphroaigDO": {
@@ -153,7 +153,7 @@
       "sexton": {
         "name": "Sexton"
       },
-      "talisker10Yo": {
+      "talisker": {
         "name": "Talisker 10 YO"
       },
       "tamnavulinDC": {
@@ -213,22 +213,22 @@
       "zubrowka": {
         "name": "Zubrowka"
       },
-      "amber05": {
+      "amber": {
         "name": "Amber 0.5"
       },
-      "ksiazenice05": {
+      "ksiazenice": {
         "name": "Ksiazenice 0.5"
       },
-      "cola033": {
+      "cola": {
         "name": "Cola 0.33"
       },
-      "sprite033": {
+      "sprite": {
         "name": "Sprite 0.33"
       },
-      "fanta033": {
+      "fanta": {
         "name": "Fanta 0.33"
       },
-      "cisowianka03": {
+      "cisowianka": {
         "name": "Cisowianka 0.3"
       },
       "espresso": {

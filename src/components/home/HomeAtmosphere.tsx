@@ -52,7 +52,7 @@ export const HomeAtmosphere = () => {
                             {src: '/images/common/vip-room.jpg', alt: 'Mars lounge interior 3'},
                         ]}
                         aspect="16/9"
-                        className="w-full max-w-[620px] md:col-span-7"
+                        className="w-full max-w-[320px] sm:max-w-[620px] md:col-span-7"
                     />
                     {/* Right image */}
                     {/*<div className="md:col-span-7">*/}

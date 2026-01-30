@@ -7,6 +7,7 @@ import {A11y, Autoplay, Navigation, Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import {CSSProperties} from "react";
 
 type Slide = {
     src: string;
@@ -39,9 +40,23 @@ export const AtmosphereSlider = ({
                 navigation
                 pagination={{clickable: true}}
                 loop
-                // autoplay={autoplay ? {delay: 4500, disableOnInteraction: false} : false}
+                breakpoints={{
+                    768: {
+                        navigation: true,
+                    },
+                }}
+                autoplay={{delay: 4500, disableOnInteraction: false}}
                 spaceBetween={16}
                 slidesPerView={1}
+                style={{
+                    // стрелки
+                    '--swiper-navigation-color': '#CFA57A',
+                    // активная точка
+                    '--swiper-pagination-color': '#CFA57A',
+                    // неактивные точки
+                    '--swiper-pagination-bullet-inactive-color': '#CFA57A',
+                    '--swiper-pagination-bullet-inactive-opacity': '0.35',
+                } as CSSProperties}
             >
                 {slides.map((s) => (
                     <SwiperSlide key={s.src}>

@@ -11,13 +11,9 @@ type Social = {
 };
 
 type Props = {
-    title: string;
-    placeCode: string;
-    address: string;
     phone: string;
     email: string;
     socials: Social[];
-    heroImageUrl: string;
 };
 
 const getSocialIcon = (type: Social["type"]) => {
@@ -28,13 +24,9 @@ const getSocialIcon = (type: Social["type"]) => {
 };
 
 export const ContactHeroCard = ({
-                                    title,
-                                    placeCode,
-                                    address,
                                     phone,
                                     email,
                                     socials,
-                                    heroImageUrl,
                                 }: Props) => {
 
     return (

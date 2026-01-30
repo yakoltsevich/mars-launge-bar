@@ -357,13 +357,13 @@
     "order": 20
   },
   {
-    "id": "jack-daniel-s",
+    "id": "jack-daniels",
     "categoryId": "standards",
     "price": {
       "amount": 26,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.jackDanielS.name",
+    "nameKey": "menu.items.jackDaniels.name",
     "isActive": true,
     "order": 30
   },
@@ -412,13 +412,13 @@
     "order": 70
   },
   {
-    "id": "talisker-10-yo",
+    "id": "talisker",
     "categoryId": "standards",
     "price": {
       "amount": 49,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.talisker10Yo.name",
+    "nameKey": "menu.items.talisker.name",
     "isActive": true,
     "order": 80
   },
@@ -632,68 +632,68 @@
     "order": 30
   },
   {
-    "id": "amber-0-5",
+    "id": "amber",
     "categoryId": "standards",
     "price": {
       "amount": 18,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.amber05.name",
+    "nameKey": "menu.items.amber.name",
     "isActive": true,
     "order": 10
   },
   {
-    "id": "ksiazenice-0-5",
+    "id": "ksiazenice",
     "categoryId": "standards",
     "price": {
       "amount": 18,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.ksiazenice05.name",
+    "nameKey": "menu.items.ksiazenice.name",
     "isActive": true,
     "order": 20
   },
   {
-    "id": "cola-0-33",
+    "id": "cola",
     "categoryId": "soft",
     "price": {
       "amount": 12,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.cola033.name",
+    "nameKey": "menu.items.cola.name",
     "isActive": true,
     "order": 10
   },
   {
-    "id": "sprite-0-33",
+    "id": "sprite",
     "categoryId": "soft",
     "price": {
       "amount": 12,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.sprite033.name",
+    "nameKey": "menu.items.sprite.name",
     "isActive": true,
     "order": 20
   },
   {
-    "id": "fanta-0-33",
+    "id": "fanta",
     "categoryId": "soft",
     "price": {
       "amount": 12,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.fanta033.name",
+    "nameKey": "menu.items.fanta.name",
     "isActive": true,
     "order": 30
   },
   {
-    "id": "cisowianka-0-3",
+    "id": "cisowianka",
     "categoryId": "soft",
     "price": {
       "amount": 10,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.cisowianka03.name",
+    "nameKey": "menu.items.cisowianka.name",
     "isActive": true,
     "order": 40
   },
