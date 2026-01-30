@@ -12,7 +12,7 @@ export const HomeMenuPreview = () => {
     const dict = useDict();
 
     return (
-        <section className="py-14">
+        <section className="py-7 sm:py-14">
             <div className="mx-auto max-w-7xl px-4">
                 <h2 className="text-center text-[24px] tracking-[0.22em] uppercase text-white/85">
                     {tByKey(dict, 'home.menuPreview.title')}
@@ -43,10 +43,10 @@ export const HomeMenuPreview = () => {
                             {/* content */}
                             <div className="relative flex h-[270px] items-end p-5">
                                 <div className="w-full">
-                                    <div className="text-[14px] tracking-[0.12em] text-white/85">
+                                    <div className="text-[20px] tracking-[0.12em] text-white/85">
                                         {tByKey(dict, it.labelKey)}
                                     </div>
-                                    <div className="mt-3 h-px w-12 bg-[#B77A45]/70"/>
+                                    <div className="mt-1 h-px w-12 bg-[#B77A45]/70"/>
                                 </div>
                             </div>
 
@@ -56,7 +56,7 @@ export const HomeMenuPreview = () => {
                     ))}
                 </div>
 
-                <div className="mt-8 flex justify-center">
+                <div className="mt-4 sm:mt-8 flex justify-center">
                     <DirectionalLink href={viewAll.href} title={tByKey(dict, viewAll.labelKey)+ ' →'}/>
                 </div>
             </div>

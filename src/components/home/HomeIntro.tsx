@@ -1,19 +1,16 @@
 'use client'
 
 import Link from "next/link";
-import {HOME_INTRO_DATA} from "./homeIntroData";
 import Image from "next/image";
 import {useDict} from "@/components/i18n/I18nProvider";
 import {tByKey} from "@/shared/helpers/tByKey";
 
+export const HOME_INTRO_DATA = {
+    primaryCta: {labelKey: "home.intro.buttons.menu", href: "/menu"},
+    secondaryCta: {labelKey: "home.intro.buttons.contacts", href: "/contact"},
+};
 export const HomeIntro = () => {
-    const {
-        title,
-        subtitle,
-        caption,
-        primaryCta,
-        secondaryCta,
-    } = HOME_INTRO_DATA;
+    const {primaryCta, secondaryCta} = HOME_INTRO_DATA;
     const dict = useDict();
 
     return (
