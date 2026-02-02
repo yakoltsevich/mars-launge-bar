@@ -1,12 +1,31 @@
 import 'server-only';
+import { promises as fs } from 'fs';
+import path from 'path';
 
-export const dictionaries = {
-    pl: () => import('@/locales/pl/menu.json').then((m) => m.default),
-    en: () => import('@/locales/en/menu.json').then((m) => m.default),
+export const locales = ['pl', 'en'] as const;
+export type Locale = typeof locales[number];
+
+export const hasLocale = (locale: string): locale is Locale =>
+    (locales as readonly string[]).includes(locale);
+
+const LOCALES_DIR = path.join(process.cwd(), 'src/locales');
+
+export const getDictionary = async (locale: Locale) => {
+    const localeDir = path.join(LOCALES_DIR, locale);
+    const files = await fs.readdir(localeDir);
+
+    const entries = await Promise.all(
+        files
+            .filter((f) => f.endsWith('.json'))
+            .map(async (file) => {
+                const key = file.replace('.json', '');
+                const content = await fs.readFile(
+                    path.join(localeDir, file),
+                    'utf-8'
+                );
+                return [key, JSON.parse(content)];
+            })
+    );
+
+    return Object.fromEntries(entries);
 };
-
-export type Locale = keyof typeof dictionaries;
-
-export const hasLocale = (locale: string): locale is Locale => locale in dictionaries;
-
-export const getDictionary = async (locale: Locale) => dictionaries[locale]();

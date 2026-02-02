@@ -76,7 +76,6 @@ export const HomeContacts = () => {
 
                                     <div className="mt-3 flex flex-wrap gap-2">
                                         {socials.map((s) => {
-                                            console.log('s', s)
                                             return (
                                                 <a
                                                     key={s.type}

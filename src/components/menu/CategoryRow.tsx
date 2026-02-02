@@ -18,7 +18,7 @@ export const CategoryRow = ({title, items, categoryId}: Props) => {
     return (
         <div className="flex flex-col items-start justify-center
         gap-2 pb-6 rounded-xl sm:px-4">
-            <div className="w-full flex items-start justify-between gap-4 px-4 sm:px-0">
+            <div className="w-full flex flex-wrap items-start justify-between gap-4 px-4 sm:px-0">
                 <h3 className="text-[22px] tracking-[0.06em] text-white/80">{title}</h3>
                 <DirectionalLink href={pathname + '/' + categoryId}/>
             </div>
