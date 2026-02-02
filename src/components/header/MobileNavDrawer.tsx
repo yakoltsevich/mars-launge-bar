@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,6 +9,8 @@ import {faXmark} from '@fortawesome/free-solid-svg-icons';
 
 import {LocaleSwitcher} from '@/components/common/LocaleSwitcher';
 import type {NavLink} from './types';
+import {tByKey} from "@/shared/helpers/tByKey";
+import {useDict} from "@/components/i18n/I18nProvider";
 
 type Props = {
     links: NavLink[];
@@ -17,6 +20,7 @@ type Props = {
 };
 
 export const MobileNavDrawer = ({links, withLang, isActive, onClose}: Props) => {
+    const dict = useDict();
     return (
         <motion.div
             id="mobile-nav"
@@ -57,12 +61,15 @@ export const MobileNavDrawer = ({links, withLang, isActive, onClose}: Props) => 
                 <div className="flex items-center justify-between px-5 pt-5">
                     <div className="flex items-center gap-3">
                         <Image
-                            src="/images/common/logo3.png"
+                            src="/images/common/mars-logo.png"
                             width={120}
                             height={20}
                             alt="Logo"
                             priority
+                            sizes="120px"
+                            className="h-[35px] w-auto"
                         />
+
                     </div>
 
                     <button
@@ -72,12 +79,12 @@ export const MobileNavDrawer = ({links, withLang, isActive, onClose}: Props) => 
               text-white/80 hover:text-white hover:bg-white/10 transition"
                         aria-label="Закрыть"
                     >
-                        <FontAwesomeIcon icon={faXmark} className="text-lg" />
+                        <FontAwesomeIcon icon={faXmark} className="text-lg"/>
                     </button>
                 </div>
 
                 <div className="px-5 pt-4">
-                    <div className="h-px w-full bg-white/10" />
+                    <div className="h-px w-full bg-white/10"/>
                 </div>
 
                 {/* Links */}
@@ -109,7 +116,7 @@ export const MobileNavDrawer = ({links, withLang, isActive, onClose}: Props) => 
                                             active ? 'text-white' : 'text-white/78 group-hover:text-white',
                                         )}
                                     >
-                    {l.titleKey}
+                    {tByKey(dict, l.titleKey)}
                   </span>
                                 </Link>
                             );
@@ -117,21 +124,23 @@ export const MobileNavDrawer = ({links, withLang, isActive, onClose}: Props) => 
                     </div>
 
                     <div className="px-2 pt-4">
-                        <div className="h-px w-full bg-white/10" />
+                        <div className="h-px w-full bg-white/10"/>
                     </div>
 
                     <div className="px-2 pt-4">
-                        <div className="rounded-2xl border border-white/10 bg-white/5 p-3 flex items-center justify-between gap-3">
+                        <div
+                            className="rounded-2xl border border-white/10 bg-white/5 p-3 flex items-center justify-between gap-3">
                             <div className="text-[11px] tracking-[0.22em] uppercase text-white/60">
-                                Language
+                                {tByKey(dict, 'navigation.language')}
                             </div>
-                            <LocaleSwitcher />
+                            <LocaleSwitcher/>
                         </div>
                     </div>
                 </nav>
 
                 {/* Bottom fade */}
-                <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/70 to-transparent" />
+                <div
+                    className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/70 to-transparent"/>
             </div>
         </motion.div>
     );
