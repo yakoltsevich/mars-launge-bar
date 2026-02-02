@@ -1,0 +1,36 @@
+[
+  {
+    "id": "vip-zone",
+    "smallDeposit": 300,
+    "bigDeposit": 400,
+    "hoursLimit": 4,
+    "personLimit": 8
+  },
+  {
+    "id": "game-zone",
+    "smallDeposit": 120,
+    "bigDeposit": 150,
+    "personLimit": 4,
+    "hoursLimit": 2
+  },
+  {
+    "id": "t1",
+    "personLimit": 4
+  },
+  {
+    "id": "t2",
+    "personLimit": 4
+  },
+  {
+    "id": "t3",
+    "personLimit": 3
+  },
+  {
+    "id": "t4",
+    "personLimit": 8
+  },
+  {
+    "id": "t5",
+    "personLimit": 4
+  }
+]

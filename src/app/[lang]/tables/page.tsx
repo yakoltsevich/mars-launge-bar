@@ -5,7 +5,7 @@ import {MainPageWrapper} from "@/components/common/MainPageWrapper";
 export default function TablesPage() {
     return (
         <MainPageWrapper>
-            <TablesGrid items={TABLES}/>
+            <TablesGrid/>
         </MainPageWrapper>
     );
 }

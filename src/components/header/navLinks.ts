@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
-    { titleKey: 'Home', href: '' },
-    { titleKey: 'Menu', href: 'menu' },
-    { titleKey: 'Tables', href: 'tables' },
-    { titleKey: 'Happenings', href: 'happenings' },
-    { titleKey: 'Contact', href: 'contact' },
+    {titleKey: 'navigation.home', href: ''},
+    {titleKey: 'navigation.menu', href: 'menu'},
+    {titleKey: 'navigation.tables', href: 'tables'},
+    {titleKey: 'navigation.happenings', href: 'happenings'},
+    {titleKey: 'navigation.contact', href: 'contact'},
 ] as const;

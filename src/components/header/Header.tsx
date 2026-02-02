@@ -82,11 +82,11 @@ export const Header = () => {
         <header className="fixed left-0 top-0 z-50 w-full">
             <div className="mx-auto max-w-5xl px-4 pt-4">
                 <HeaderShell>
-                    <HeaderLogo href={withLang('')} />
+                    <HeaderLogo href={withLang('')}/>
 
                     <div className="flex items-center gap-2 pr-3">
-                        <DesktopNav links={NAV_LINKS as unknown as NavLink[]} withLang={withLang} />
-                        <MobileMenuButton isOpen={isOpen} onToggle={toggle} />
+                        <DesktopNav links={NAV_LINKS as unknown as NavLink[]} withLang={withLang}/>
+                        <MobileMenuButton isOpen={isOpen} onToggle={toggle}/>
                     </div>
                 </HeaderShell>
             </div>
@@ -100,7 +100,7 @@ export const Header = () => {
                         exit={{opacity: 0}}
                         aria-hidden={!isOpen}
                     >
-                        <MobileNavOverlay onClose={close} />
+                        <MobileNavOverlay onClose={close}/>
 
                         <MobileNavDrawer
                             links={mobileLinks}

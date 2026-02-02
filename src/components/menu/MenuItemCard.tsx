@@ -38,8 +38,9 @@ export const MenuItemCard = ({item}: Props) => {
             <div className="relative min-h-[260px] aspect-square w-full">
                 <Image
                     src={src}
-                    alt={tByKey(dict, item.nameKey) ?? ""}
+                    alt={tByKey(dict, item.nameKey)}
                     fill
+                    sizes="(min-width: 640px) 260px, 100vw"
                     className="object-contain opacity-90 transition duration-500"
                     onError={() => setSrc(FALLBACK_URL)}
                 />

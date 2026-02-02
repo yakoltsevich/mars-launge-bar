@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const Footer = () => {
     const brand = 'the MARS lounge'
     const developerName = 'Dev by @yak'
-    const githubUrl = 'https://github.com/yakoltsevich'
+    const url = 'https://www.instagram.com/kind_grandfa/'
 
     return (
         <footer className="mt-14 border-t border-white/10">
@@ -32,7 +32,7 @@ export const Footer = () => {
                     <span className="hidden sm:inline">© {new Date().getFullYear()}</span>
                     <span className="opacity-30">·</span>
                     <Link
-                        href={githubUrl}
+                        href={url}
                         target="_blank"
                         rel="noreferrer"
                         className="hover:text-white/70 transition"

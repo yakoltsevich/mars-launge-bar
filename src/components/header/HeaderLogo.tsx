@@ -6,7 +6,7 @@ type Props = {
     href: string;
 };
 
-export const HeaderLogo = ({href}: Props) => {
+export const HeaderLogo = ({ href }: Props) => {
     return (
         <Link
             href={href}
@@ -14,11 +14,13 @@ export const HeaderLogo = ({href}: Props) => {
             aria-label="На главную"
         >
             <Image
-                src="/images/common/logo3.png"
+                src="/images/common/mars-logo.png"
                 width={120}
                 height={20}
-                alt="Logo"
+                alt="Mars Lounge Bar logo"
                 priority
+                sizes="120px"
+                className="h-[35px] w-auto"
             />
         </Link>
     );
