@@ -11,8 +11,8 @@ export const HomeAtmosphere = () => {
 
     return (
         <BigCardWrapper>
-            <div className="flex flex-col gap-4 sm:flex-row w-full px-8 py-10 sm:px-12">
-                <div className="w-full sm:w-1/2 sm:px-4 flex-col my-auto">
+            <div className="flex flex-col gap-4 sm:flex-row w-full px-0 sm:py-10 sm:px-12">
+                <div className="w-full sm:w-1/2 sm:px-4 flex-col my-auto p-4">
                     <h2 className="text-[24px] tracking-[0.22em] uppercase text-white/85 text-center">
                         {tByKey(dict, 'home.atmosphere.title')}
                     </h2>

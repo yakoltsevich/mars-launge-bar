@@ -346,13 +346,13 @@
     "order": 10
   },
   {
-    "id": "glenmorangie-t-c",
+    "id": "glenmorangie",
     "categoryId": "standards",
     "price": {
       "amount": 29,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.glenmorangieTC.name",
+    "nameKey": "menu.items.glenmorangie.name",
     "isActive": true,
     "order": 20
   },
@@ -368,13 +368,13 @@
     "order": 30
   },
   {
-    "id": "laphroaig-d-o",
+    "id": "laphroaig",
     "categoryId": "standards",
     "price": {
       "amount": 43,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.laphroaigDO.name",
+    "nameKey": "menu.items.laphroaig.name",
     "isActive": true,
     "order": 40
   },
@@ -423,24 +423,24 @@
     "order": 80
   },
   {
-    "id": "tamnavulin-d-c",
+    "id": "tamnavulin",
     "categoryId": "standards",
     "price": {
       "amount": 29,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.tamnavulinDC.name",
+    "nameKey": "menu.items.tamnavulin.name",
     "isActive": true,
     "order": 90
   },
   {
-    "id": "tenjaku",
+    "id": "tenjaku-w",
     "categoryId": "standards",
     "price": {
       "amount": 37,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.tenjaku.name",
+    "nameKey": "menu.items.tenjakuW.name",
     "isActive": true,
     "order": 100
   },
@@ -467,13 +467,13 @@
     "order": 20
   },
   {
-    "id": "gordon-s",
+    "id": "gordons",
     "categoryId": "standards",
     "price": {
       "amount": 20,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.gordonS.name",
+    "nameKey": "menu.items.gordons.name",
     "isActive": true,
     "order": 30
   },
@@ -500,13 +500,13 @@
     "order": 50
   },
   {
-    "id": "tenjaku-2",
+    "id": "tenjaku-g",
     "categoryId": "standards",
     "price": {
       "amount": 23,
       "currency": "PLN"
     },
-    "nameKey": "menu.items.tenjaku2.name",
+    "nameKey": "menu.items.tenjakuG.name",
     "isActive": true,
     "order": 60
   },

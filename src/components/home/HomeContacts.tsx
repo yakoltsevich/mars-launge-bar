@@ -13,8 +13,7 @@ export const HomeContacts = () => {
     const emailHref = `mailto:${email}`;
 
     return (
-        <section className="py-7 sm:py-14">
-            <div className="mx-auto max-w-7xl px-4">
+        <section>
                 <div className="overflow-hidden rounded-[28px] border border-white/10
             bg-black/35 backdrop-blur-md shadow-[0_18px_70px_rgba(0,0,0,0.65)]"
                 >
@@ -106,13 +105,12 @@ export const HomeContacts = () => {
                     <div className="h-px w-full bg-white/10"/>
 
                     {/* footer strip (optional, matches vibe) */}
-                    <div className="px-8 py-4 sm:px-12">
-                        <div className="text-[11px] tracking-[0.16em] uppercase text-white/40">
-                            {tByKey(dict, 'contacts.footer')}
-                        </div>
-                    </div>
+                    {/*<div className="px-8 py-4 sm:px-12">*/}
+                    {/*    <div className="text-[11px] tracking-[0.16em] uppercase text-white/40">*/}
+                    {/*        {tByKey(dict, 'contacts.footer')}*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
-            </div>
         </section>
     );
 };

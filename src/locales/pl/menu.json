@@ -135,13 +135,13 @@
       "bulleit": {
         "name": "Bulleit"
       },
-      "glenmorangieTC": {
+      "glenmorangie": {
         "name": "Glenmorangie T.C."
       },
       "jackDaniels": {
         "name": "Jack Daniel’s"
       },
-      "laphroaigDO": {
+      "laphroaig": {
         "name": "Laphroaig D.O."
       },
       "makerSMark": {
@@ -156,10 +156,10 @@
       "talisker": {
         "name": "Talisker 10 YO"
       },
-      "tamnavulinDC": {
+      "tamnavulin": {
         "name": "Tamnavulin D.C."
       },
-      "tenjaku": {
+      "tenjakuW": {
         "name": "Tenjaku"
       },
       "beefeater": {
@@ -168,7 +168,7 @@
       "bombay": {
         "name": "Bombay"
       },
-      "gordonS": {
+      "gordons": {
         "name": "Gordon’s"
       },
       "hendriks": {
@@ -177,7 +177,7 @@
       "roku": {
         "name": "Roku"
       },
-      "tenjaku2": {
+      "tenjakuG": {
         "name": "Tenjaku"
       },
       "bacardi": {

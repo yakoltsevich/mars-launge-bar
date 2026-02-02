@@ -23,6 +23,63 @@
       "text": "A place where you can relax and enjoy great hookahs, signature cocktails, and a well-crafted bar. A cozy atmosphere, soft lighting, comfortable tables, and attentive service — so you can truly enjoy your time."
     }
   },
+  "happenings": {
+    "title": "Events & Specials",
+    "titleEvents": "Events",
+    "titleSpecials": "Specials",
+    "today": "Today",
+    "specials": {
+      "days": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      },
+      "monday": {
+        "title": "Free snack with hookah",
+        "description": "Choose from: 7Days, nuts, chips, or a Mars bar"
+      },
+      "tuesday": {
+        "title": "Free coffee with hookah"
+      },
+      "wednesday": {
+        "title": "Free beer with hookah"
+      },
+      "thursday": {
+        "title": "50% off the first cocktail",
+        "description": "With any hookah order"
+      },
+      "s_mon.title": "Free snack with hookah",
+      "s_mon.description": "Choose from: 7Days, nuts, chips, or a Mars bar",
+      "s_tue.title": "Free coffee with hookah",
+      "s_wed.title": "Free beer with hookah",
+      "s_thu.title": "50% off the first cocktail",
+      "s_thu.description": "With any hookah order"
+    },
+    "events": {
+      "mafia": {
+        "title": "Mafia Game Night"
+      },
+      "karaoke": {
+        "title": "Karaoke Night"
+      },
+      "masterclass": {
+        "title": "Hookah & Bar Masterclass"
+      },
+      "violin": {
+        "title": "Violinist Viktor",
+        "description": "Live violin performance"
+      },
+      "verka": {
+        "title": "Verka Serduchka Tribute",
+        "description": "From Wera with Love"
+      }
+    },
+    "seeAll": "See all"
+  },
   "contacts": {
     "title": "Contacts",
     "address": "Address",
@@ -173,13 +230,13 @@
       "bulleit": {
         "name": "Bulleit"
       },
-      "glenmorangieTC": {
+      "glenmorangie": {
         "name": "Glenmorangie T.C."
       },
       "jackDaniels": {
         "name": "Jack Daniel’s"
       },
-      "laphroaigDO": {
+      "laphroaig": {
         "name": "Laphroaig D.O."
       },
       "makerSMark": {
@@ -194,10 +251,10 @@
       "talisker": {
         "name": "Talisker 10 YO"
       },
-      "tamnavulinDC": {
+      "tamnavulin": {
         "name": "Tamnavulin D.C."
       },
-      "tenjaku": {
+      "tenjakuW": {
         "name": "Tenjaku"
       },
       "beefeater": {
@@ -206,7 +263,7 @@
       "bombay": {
         "name": "Bombay"
       },
-      "gordonS": {
+      "gordons": {
         "name": "Gordon’s"
       },
       "hendriks": {
@@ -215,7 +272,7 @@
       "roku": {
         "name": "Roku"
       },
-      "tenjaku2": {
+      "tenjakuG": {
         "name": "Tenjaku"
       },
       "bacardi": {

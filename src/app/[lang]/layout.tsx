@@ -7,8 +7,10 @@ import {getDictionary, hasLocale} from "@/app/[lang]/dictionaries";
 import {notFound} from "next/navigation";
 import type {ReactNode} from "react";
 
-import { config } from '@fortawesome/fontawesome-svg-core'
+import {config} from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import {Footer} from "@/components/footer/Footer";
+
 config.autoAddCss = false
 
 export const generateStaticParams = async () => [{lang: "pl"}, {lang: "en"}];
@@ -35,6 +37,7 @@ export default async function RootLayout({children, params}: LangLayoutProps) {
         <body className={`${montserrat.className} antialiased`}>
         <Header/>
         <I18nProvider dict={dict}>{children}</I18nProvider>
+        <Footer/>
         </body>
         </html>
     );
