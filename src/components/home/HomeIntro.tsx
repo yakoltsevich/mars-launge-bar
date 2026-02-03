@@ -37,7 +37,7 @@ export const HomeIntro = () => {
             </div>
 
             {/* Content */}
-            <div className="relative px-8 py-16 sm:px-12 sm:py-20">
+            <div className="relative p-6 sm:py-16 sm:px-12 sm:py-20">
                 <div className="max-w-[560px]">
                     <h1 className="text-[44px] leading-[1.05] tracking-[0.12em] uppercase text-[#E9E2D7] sm:text-[56px]">
                         {tByKey(dict, 'home.intro.title')}

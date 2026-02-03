@@ -1,7 +1,6 @@
 import React from "react";
 import {faInstagram, faTelegram, faVk} from "@fortawesome/free-brands-svg-icons";
 import {LinkButton} from "@/components/common/LinkButton";
-import Image from "next/image";
 import {SocialButton} from "@/components/common/SocialButton";
 
 type Social = {
@@ -34,12 +33,6 @@ export const ContactHeroCard = ({
              shadow-[0_18px_70px_rgba(0,0,0,0.65)] ">
 
             <div className="absolute inset-0 ">
-                <Image
-                    src='/images/common/outside.jpg'
-                    width={1200} height={600}
-                    alt=""
-                    className="h-full w-full object-cover opacity-85"
-                />
                 <div className="absolute inset-0 bg-black/55"/>
                 <div
                     className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.12),rgba(0,0,0,0.92))]"/>
