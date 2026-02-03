@@ -2,13 +2,13 @@
 import React from 'react';
 import Link from 'next/link';
 import {LocaleSwitcher} from '@/components/common/LocaleSwitcher';
-import type {NavLink} from './types';
+import type {NavLink} from './navLinks';
 import {useDict} from "@/components/i18n/I18nProvider";
 import {tByKey} from "@/shared/helpers/tByKey";
 
 type Props = {
     links: NavLink[];
-    withLang: (href: NavLink['href']) => string;
+    withLang: (href: string) => string;
 };
 
 export const DesktopNav = ({links, withLang}: Props) => {

@@ -11,11 +11,11 @@ export const MobileMenuButton = ({isOpen, onToggle}: Props) => {
             type="button"
             onClick={onToggle}
             className="
-        ml-1 grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5
+        grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5
         text-white/80 hover:text-white hover:bg-white/10 transition
         md:hidden
       "
-            aria-label={isOpen ? 'Закрыть меню' : 'Открыть меню'}
+            aria-label={isOpen ? 'open menu' : 'close menu'}
             aria-expanded={isOpen}
             aria-controls="mobile-nav"
         >

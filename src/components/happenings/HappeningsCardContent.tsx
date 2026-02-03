@@ -60,7 +60,7 @@ export const HappeningsCardContent = ({
             </div>
 
             <div className="mt-3">
-                <div className="text-[22px] leading-[1.15] tracking-[0.06em] text-white/88">
+                <div className="text-[20px] leading-[1.15] tracking-[0.06em] text-white/88">
                     {tByKey(dict, titleKey)}
                 </div>
 

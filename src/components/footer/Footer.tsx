@@ -1,36 +1,38 @@
 'use client';
 
-import React from 'react';
+import React, {useMemo} from 'react';
 import Link from 'next/link';
+import {usePathname} from "next/navigation";
+import {getLangPrefix, withLang} from "@/shared/helpers/lang";
 
 export const Footer = () => {
     const brand = 'the MARS lounge'
     const developerName = 'Dev by @yak'
     const url = 'https://www.instagram.com/kind_grandfa/'
+    const pathname = usePathname();
+
+    const langPrefix = useMemo(() => getLangPrefix(pathname ?? '/'), [pathname]);
 
     return (
         <footer className="mt-14 border-t border-white/10">
-            <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-5">
-                {/* Brand */}
-                <div className="flex items-center gap-2 text-[11px] tracking-[0.26em] uppercase text-white/55">
-
-                    <Link
-                        href="/"
-                        className="flex items-center gap-3 text-white/90 hover:text-white transition"
-                        aria-label="На главную"
-                    >
-                        <span
-                            className="h-2 w-2 rounded-full bg-red-500/90 shadow-[0_0_14px_rgba(239,68,68,0.35)]"
-                            aria-hidden
-                        /> <span>{brand}</span>
-                    </Link>
-
-                </div>
+            <div
+                className="mx-auto flex max-w-5xl items-center justify-between px-4 py-5 text-[10px] tracking-[0.26em] uppercase text-white/55">
+                <Link
+                    href={withLang('', langPrefix)}
+                    className="flex items-center gap-3 text-white/90 hover:text-white transition"
+                    aria-label="На главную"
+                >
+                    <span
+                        className="h-2 w-2 rounded-full bg-red-500/90 shadow-[0_0_14px_rgba(239,68,68,0.35)]"
+                        aria-hidden
+                    />
+                    <span>{brand}</span>
+                </Link>
 
                 {/* Signature */}
-                <div className="flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase text-white/45">
-                    <span className="hidden sm:inline">© {new Date().getFullYear()}</span>
-                    <span className="opacity-30">·</span>
+                <div className="flex items-center gap-2">
+                    <span className="hidden sm:inline">2026</span>
+                    <span className="hidden sm:inline">·</span>
                     <Link
                         href={url}
                         target="_blank"

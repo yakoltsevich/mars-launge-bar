@@ -1,7 +1,7 @@
 'use client'
 import {useDict} from "@/components/i18n/I18nProvider";
 import {HomeMenuPreview} from "@/components/home/HomeMenuPreview";
-import {HomeContacts} from "@/components/home/HomeContacts";
+import {Contacts} from "@/components/contact/Contacts";
 import {tByKey} from "@/shared/helpers/tByKey";
 import {BigCardWrapper} from "@/components/common/BigCardWrapper";
 import {AtmosphereSlider} from "@/components/common/AtmosphereSlider";

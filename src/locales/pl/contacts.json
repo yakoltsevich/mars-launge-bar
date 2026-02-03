@@ -10,5 +10,9 @@
     "telegram": "Telegram",
     "facebook": "Facebook"
   },
-  "footer": "Shisha lounge • bar • craft cocktails"
+  "footer": "Shisha lounge • bar • craft cocktails",
+  "monday": "Pon",
+  "thursday": "Czw",
+  "friday": "Pt",
+  "sunday": "Nd"
 }

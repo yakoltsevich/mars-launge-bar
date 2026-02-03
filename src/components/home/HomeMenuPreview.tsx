@@ -2,15 +2,18 @@
 import Link from "next/link";
 import {HOME_MENU_PREVIEW_DATA} from "./homeMenuPreviewData";
 import {DirectionalLink} from "@/components/common/DirectionalLink";
-import React from "react";
+import React, {useMemo} from "react";
 import Image from "next/image";
 import {useDict} from "@/components/i18n/I18nProvider";
 import {tByKey} from "@/shared/helpers/tByKey";
+import {usePathname} from "next/navigation";
+import {getLangPrefix, withLang} from "@/shared/helpers/lang";
 
 export const HomeMenuPreview = () => {
     const {viewAll, items} = HOME_MENU_PREVIEW_DATA;
     const dict = useDict();
-
+    const pathname = usePathname();
+    const langPrefix = useMemo(() => getLangPrefix(pathname ?? '/'), [pathname]);
     return (
         <section className="py-7 sm:py-14">
             <h2 className="text-center text-[24px] tracking-[0.22em] uppercase text-white/85">
@@ -21,7 +24,7 @@ export const HomeMenuPreview = () => {
                 {items.map((it) => (
                     <Link
                         key={it.href}
-                        href={it.href}
+                        href={withLang(it.href, langPrefix)}
                         className="group relative overflow-hidden rounded-[22px] border border-white/10 bg-black/25
                 shadow-[0_18px_70px_rgba(0,0,0,0.65)] transition hover:border-white/15">
                         {/* background image */}

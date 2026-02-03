@@ -8,14 +8,14 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faXmark} from '@fortawesome/free-solid-svg-icons';
 
 import {LocaleSwitcher} from '@/components/common/LocaleSwitcher';
-import type {NavLink} from './types';
+import type {NavLink} from './navLinks';
 import {tByKey} from "@/shared/helpers/tByKey";
 import {useDict} from "@/components/i18n/I18nProvider";
 
 type Props = {
     links: NavLink[];
-    withLang: (href: NavLink['href']) => string;
-    isActive: (href: NavLink['href']) => boolean;
+    withLang: (href: string) => string;
+    isActive: (href: string) => boolean;
     onClose: () => void;
 };
 
@@ -35,25 +35,15 @@ export const MobileNavDrawer = ({links, withLang, isActive, onClose}: Props) => 
         >
             {/* Background “glass” */}
             <div
-                className="
-          absolute inset-0
-          bg-gradient-to-b from-black/70 via-black/55 to-black/80
-          backdrop-blur-xl
-        "
-            />
+                className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80 backdrop-blur-xl"/>
             {/* Accent glow */}
             <div
-                className="
-          pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full
-          bg-[#CFA57A]/18 blur-3xl
-        "
+                className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[#CFA57A]/18 blur-3xl"
             />
             {/* Subtle highlights */}
             <div
-                className="
-          pointer-events-none absolute inset-0
-          [background:radial-gradient(900px_500px_at_70%_-10%,rgba(255,255,255,0.10),transparent_60%)]
-        "
+                className="pointer-events-none absolute inset-0
+          [background:radial-gradient(900px_500px_at_70%_-10%,rgba(255,255,255,0.10),transparent_60%)]"
             />
 
             <div className="relative h-full">
@@ -69,7 +59,6 @@ export const MobileNavDrawer = ({links, withLang, isActive, onClose}: Props) => 
                             sizes="120px"
                             className="h-[35px] w-auto"
                         />
-
                     </div>
 
                     <button
@@ -116,8 +105,8 @@ export const MobileNavDrawer = ({links, withLang, isActive, onClose}: Props) => 
                                             active ? 'text-white' : 'text-white/78 group-hover:text-white',
                                         )}
                                     >
-                    {tByKey(dict, l.titleKey)}
-                  </span>
+                                        {tByKey(dict, l.titleKey)}
+                                    </span>
                                 </Link>
                             );
                         })}

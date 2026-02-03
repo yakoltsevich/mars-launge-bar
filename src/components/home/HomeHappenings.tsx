@@ -16,7 +16,6 @@ export const HOME_HAPPENINGS_DATA = {
 export const HomeHappenings = () => {
     const {viewAll} = HOME_HAPPENINGS_DATA;
     const dict = useDict();
-
     const events = [getNearestUpcomingOrLast(getEvents())]
     const specials = [getNearestDay(getSpecials())]
 

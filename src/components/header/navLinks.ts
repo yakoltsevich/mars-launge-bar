@@ -4,4 +4,9 @@ export const NAV_LINKS = [
     {titleKey: 'navigation.tables', href: 'tables'},
     {titleKey: 'navigation.happenings', href: 'happenings'},
     {titleKey: 'navigation.contact', href: 'contact'},
-] as const;
+]
+
+export type NavLink = {
+    titleKey: string;
+    href: string;
+};

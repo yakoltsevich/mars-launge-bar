@@ -10,5 +10,9 @@
     "telegram": "Telegram",
     "facebook": "Facebook"
   },
-  "footer": "Hookah lounge • bar • craft cocktails"
+  "footer": "Hookah lounge • bar • craft cocktails",
+  "monday": "Mon",
+  "thursday": "Thu",
+  "friday": "Fri",
+  "sunday": "Sun"
 }

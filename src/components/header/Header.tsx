@@ -5,7 +5,7 @@ import {usePathname} from 'next/navigation';
 import {AnimatePresence, motion} from 'framer-motion';
 
 import {NAV_LINKS} from './navLinks';
-import type {NavLink} from './types';
+import type {NavLink} from './navLinks';
 
 import {HeaderShell} from './HeaderShell';
 import {HeaderLogo} from './HeaderLogo';
@@ -13,6 +13,7 @@ import {DesktopNav} from './DesktopNav';
 import {MobileMenuButton} from './MobileMenuButton';
 import {MobileNavOverlay} from './MobileNavOverlay';
 import {MobileNavDrawer} from './MobileNavDrawer';
+import {withLang} from "@/shared/helpers/lang";
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -60,14 +61,9 @@ export const Header = () => {
 
     const langPrefix = useMemo(() => getLangPrefix(pathname ?? '/'), [pathname]);
 
-    const withLang = (href: NavLink['href']) => {
-        // href relative: '' | 'menu' | ...
-        if (!langPrefix) return href ? `/${href}` : '/';
-        return href ? `${langPrefix}/${href}` : `${langPrefix}/`;
-    };
 
     const isActive = (href: NavLink['href']) => {
-        const full = withLang(href);
+        const full = withLang(href, langPrefix);
 
         // Home
         if (full === `${langPrefix}/`) return pathname === `${langPrefix}/`;
@@ -76,16 +72,15 @@ export const Header = () => {
         return pathname === full || !!pathname?.startsWith(`${full}/`);
     };
 
-    const mobileLinks = useMemo(() => NAV_LINKS as unknown as NavLink[], []);
-
+    const navWithLang = (href: string) => withLang(href, langPrefix)
     return (
         <header className="fixed left-0 top-0 z-50 w-full">
             <div className="mx-auto max-w-5xl px-4 pt-4">
                 <HeaderShell>
-                    <HeaderLogo href={withLang('')}/>
+                    <HeaderLogo href={withLang('', langPrefix)}/>
 
-                    <div className="flex items-center gap-2 pr-3">
-                        <DesktopNav links={NAV_LINKS as unknown as NavLink[]} withLang={withLang}/>
+                    <div className="flex items-center gap-2 pr-2">
+                        <DesktopNav links={NAV_LINKS} withLang={navWithLang}/>
                         <MobileMenuButton isOpen={isOpen} onToggle={toggle}/>
                     </div>
                 </HeaderShell>
@@ -103,8 +98,8 @@ export const Header = () => {
                         <MobileNavOverlay onClose={close}/>
 
                         <MobileNavDrawer
-                            links={mobileLinks}
-                            withLang={withLang}
+                            links={NAV_LINKS}
+                            withLang={navWithLang}
                             isActive={isActive}
                             onClose={close}
                         />
