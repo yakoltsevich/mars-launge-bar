@@ -1,25 +1,12 @@
 {
   "address": "Długie Ogrody 18/U6, 80-765 Gdańsk, Poland",
-  "phone": "+48 000 000 000",
-  "email": "info@yourwebsite.com",
+  "phone": "+48 508 601 414",
+  "email": "marsbargdansk@gmail.com",
   "socials": [
     {
       "type": "instagram",
       "link": "https://www.instagram.com/themars_bar_/"
-    },
-    {
-      "type":  "telegram",
-      "link":  "https://t.me/"
     }
   ],
-  "workTime": {
-    "monday": "16:00 - 00:00",
-    "tuesday": "16:00 - 00:00",
-    "wednesday": "16:00 - 00:00",
-    "thursday": "16:00 - 00:00",
-    "friday": "16:00 - 03:00",
-    "saturday": "16:00 - 03:00",
-    "sunday": "16:00 - 00:00"
-  },
   "mapQuery": "Długie Ogrody 18/U6, 80-765 Gdańsk, Poland"
 }

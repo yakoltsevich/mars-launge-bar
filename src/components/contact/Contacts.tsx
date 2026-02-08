@@ -30,7 +30,8 @@ export const Contacts = () => {
                         <div className="mt-5  tracking-[0.22em] text-[15px] leading-6 text-white/55">
                             <p>{tByKey(dict, 'contacts.monday')} - {tByKey(dict, 'contacts.thursday')}: 16:00 -
                                 00:00</p>
-                            <p>{tByKey(dict, 'contacts.friday')} - {tByKey(dict, 'contacts.sunday')}: 16:00 - 03:00</p>
+                            <p>{tByKey(dict, 'contacts.friday')} - {tByKey(dict, 'contacts.saturday')}: 16:00 - 03:00</p>
+                            <p>{tByKey(dict, 'contacts.sunday')}: 16:00 - 02:00</p>
                         </div>
                     </div>
 
@@ -43,7 +44,7 @@ export const Contacts = () => {
                             <div className="mt-2 text-[14px] text-white/80">{address}</div>
                         </div>
 
-                        <div className="grid gap-4 sm:grid-cols-2">
+                        <div className="grid gap-4 sm:grid-cols-[5fr_8fr]">
                             <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
                                 <div className="text-[11px] tracking-[0.18em] uppercase text-white/45">
                                     {tByKey(dict, 'contacts.phone')}
@@ -82,13 +83,9 @@ export const Contacts = () => {
                                             href={s.link}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="
-                              rounded-xl border border-white/10
-                              bg-black/20 px-3 py-2
-                              text-[12px] tracking-[0.14em] uppercase
-                              text-white/70 hover:text-white
-                              hover:bg-white/5 transition
-                            "
+                                            className="rounded-xl border border-white/10
+                              bg-black/20 px-3 py-2 text-[12px] tracking-[0.14em] uppercase
+                              text-white/70 hover:text-white hover:bg-white/5 transition"
                                         >
                                             {tByKey(dict, `contacts.socials.${s.type}`)}
                                         </a>
