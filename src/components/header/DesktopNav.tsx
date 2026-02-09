@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Link from 'next/link';
-import {LocaleSwitcher} from '@/components/common/LocaleSwitcher';
+import {LocaleSwitcher} from '@/components/header/LocaleSwitcher';
 import type {NavLink} from './navLinks';
 import {useDict} from "@/components/i18n/I18nProvider";
 import {tByKey} from "@/shared/helpers/tByKey";

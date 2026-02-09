@@ -23,6 +23,7 @@ export const HomeIntro = () => {
                     src='/images/common/bar.jpg'
                     alt=""
                     fill
+                    sizes="(max-width: 768px) 100vw, 800px"
                     className="h-full w-full object-cover opacity-80"
                 />
 
@@ -30,8 +31,8 @@ export const HomeIntro = () => {
                 <div className="absolute inset-0
                     bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.12),rgba(0,0,0,0.92))]"/>
 
-                <div className="absolute -right-24 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full
-                    bg-[radial-gradient(circle,rgba(255,170,90,0.25),rgba(255,170,90,0)_60%)] blur-2xl"/>
+                {/*<div className="absolute -right-24 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full*/}
+                {/*    bg-[radial-gradient(circle,rgba(255,170,90,0.25),rgba(255,170,90,0)_60%)] blur-2xl"/>*/}
                 <div className="absolute right-10 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full
                 bg-[radial-gradient(circle,rgba(255,255,255,0.08),rgba(255,255,255,0)_65%)] blur-3xl"/>
             </div>

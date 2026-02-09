@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faXmark} from '@fortawesome/free-solid-svg-icons';
 
-import {LocaleSwitcher} from '@/components/common/LocaleSwitcher';
+import {LocaleSwitcher} from '@/components/header/LocaleSwitcher';
 import type {NavLink} from './navLinks';
 import {tByKey} from "@/shared/helpers/tByKey";
 import {useDict} from "@/components/i18n/I18nProvider";
