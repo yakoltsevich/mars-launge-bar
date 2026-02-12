@@ -4,28 +4,28 @@ import {useDict} from "@/components/i18n/I18nProvider";
 import {tByKey} from "@/shared/helpers/tByKey";
 import React from "react";
 import {HappeningsCenter} from "@/components/happenings/Happenings";
-import {HomeIntro} from "@/components/home/HomeIntro";
-import {getEvents, getSpecials} from "@/lib/happenings";
-import {getNearestUpcomingOrLast} from "@/shared/helpers/getNearestUpcomingOrLast";
+import {getSpecials} from "@/lib/happenings";
+import {getNearestOrLast} from "@/shared/helpers/getNearestOrLast";
 import {getNearestDay} from "@/shared/helpers/getNearestDay";
+import {StrapiEvent} from "@/lib/strapi/types";
 
 export const HOME_HAPPENINGS_DATA = {
     viewAll: {labelKey: "happenings.seeAll", href: "/happenings"},
 };
-
-export const HomeHappenings = () => {
+type HomeHappeningsProps = { events: StrapiEvent[] };
+export const HomeHappenings = ({events}: HomeHappeningsProps) => {
     const {viewAll} = HOME_HAPPENINGS_DATA;
     const dict = useDict();
-    const events = [getNearestUpcomingOrLast(getEvents())]
     const specials = [getNearestDay(getSpecials())]
+    const nearestEvent = getNearestOrLast(events)
 
     return (
         <section className="py-7 sm:py-14">
-                <HappeningsCenter events={events} specials={specials}/>
+            <HappeningsCenter events={nearestEvent} specials={specials}/>
 
-                <div className="mt-2 sm:mt-4 flex justify-center">
-                    <DirectionalLink href={viewAll.href} title={tByKey(dict, viewAll.labelKey) + ' →'}/>
-                </div>
+            <div className="mt-2 sm:mt-4 flex justify-center">
+                <DirectionalLink href={viewAll.href} title={tByKey(dict, viewAll.labelKey) + ' →'}/>
+            </div>
         </section>
     );
 };

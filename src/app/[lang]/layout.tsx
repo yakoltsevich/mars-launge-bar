@@ -11,6 +11,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
 
 config.autoAddCss = false;
+export const dynamic = 'force-static'
+export const revalidate = false
 
 export const generateStaticParams = async () => [{lang: "pl"}, {lang: "en"}];
 

@@ -3,6 +3,8 @@ import Link from "next/link";
 import {getContactsInfo} from "@/lib/contacts";
 import {useDict} from "@/components/i18n/I18nProvider";
 import {tByKey} from "@/shared/helpers/tByKey";
+import {CardTitle} from "@/components/common/CardTitle";
+import React from "react";
 
 export const Contacts = () => {
     const contactsInfo = getContactsInfo()
@@ -20,10 +22,9 @@ export const Contacts = () => {
                 <div className="flex flex-col gap-4 sm:gap-0 sm:flex-row sm:items-start sm:justify-between">
                     {/* Title + accent */}
                     <div className="flex flex-col mr-4 sm:mr-12 h-full ">
-                        <h2 className="text-[24px] tracking-[0.22em] uppercase text-white/85">
-                            {tByKey(dict, 'contacts.title')}
-                        </h2>
-                        <div className="mt-4 h-px w-16 bg-[#B77A45]/70"/>
+                        <CardTitle titleKey='contacts.title' className='m-0 sm:m-0 mb-4 text-left'/>
+
+                        <div className="h-px w-16 bg-[#B77A45]/70"/>
                         <p className="mt-5 text-[15px] leading-6 text-white/55">
                             {tByKey(dict, 'contacts.text')}
                         </p>

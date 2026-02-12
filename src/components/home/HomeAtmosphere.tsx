@@ -1,10 +1,10 @@
 'use client'
 import {useDict} from "@/components/i18n/I18nProvider";
-import {HomeMenuPreview} from "@/components/home/HomeMenuPreview";
-import {Contacts} from "@/components/contact/Contacts";
 import {tByKey} from "@/shared/helpers/tByKey";
 import {BigCardWrapper} from "@/components/common/BigCardWrapper";
 import {AtmosphereSlider} from "@/components/common/AtmosphereSlider";
+import {CardTitle} from "@/components/common/CardTitle";
+import React from "react";
 
 export const HomeAtmosphere = () => {
     const dict = useDict();
@@ -13,11 +13,9 @@ export const HomeAtmosphere = () => {
         <BigCardWrapper>
             <div className="flex flex-col gap-4 sm:gap-0 sm:flex-row w-full px-0 sm:py-10 sm:px-12">
                 <div className="w-full sm:w-1/2 flex-col my-auto py-4 px-4 sm:px-0 sm:mr-12">
-                    <h2 className="text-[24px] tracking-[0.22em] uppercase text-white/85 text-center">
-                        {tByKey(dict, 'home.atmosphere.title')}
-                    </h2>
+                    <CardTitle titleKey='home.atmosphere.title' className='m-0 sm:m-0 mb-5 '/>
 
-                    <p className="mt-5 text-[14px] leading-6 text-white/60 text-center">{tByKey(dict, 'home.atmosphere.text')}</p>
+                    <p className="text-[14px] leading-6 text-white/60 text-center">{tByKey(dict, 'home.atmosphere.text')}</p>
                 </div>
                 <AtmosphereSlider
                     slides={[

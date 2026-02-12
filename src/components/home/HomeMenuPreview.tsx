@@ -8,6 +8,7 @@ import {useDict} from "@/components/i18n/I18nProvider";
 import {tByKey} from "@/shared/helpers/tByKey";
 import {usePathname} from "next/navigation";
 import {getLangPrefix, withLang} from "@/shared/helpers/lang";
+import {CardTitle} from "@/components/common/CardTitle";
 
 export const HomeMenuPreview = () => {
     const {viewAll, items} = HOME_MENU_PREVIEW_DATA;
@@ -16,11 +17,9 @@ export const HomeMenuPreview = () => {
     const langPrefix = useMemo(() => getLangPrefix(pathname ?? '/'), [pathname]);
     return (
         <section className="py-7 sm:py-14">
-            <h2 className="text-center text-[24px] tracking-[0.22em] uppercase text-white/85">
-                {tByKey(dict, 'home.menuPreview.title')}
-            </h2>
+            <CardTitle titleKey='home.menuPreview.title'/>
 
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {items.map((it) => (
                     <Link
                         key={it.href}
