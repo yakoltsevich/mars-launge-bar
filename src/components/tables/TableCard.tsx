@@ -18,7 +18,7 @@ export const TableCard = ({item}: Props) => {
     return (
         <div
             className={clsx("overflow-hidden rounded-[22px] border border-white/10 bg-black/30",
-                "shadow-[0_18px_60px_rgba(0,0,0,0.6)] hover:border-white/15 transition  w-full box-border")}
+                "shadow-[0_18px_60px_rgba(0,0,0,0.6)] hover:border-white/15 transition  w-full box-border backdrop-blur-xs")}
         >
             {/* image */}
             <div className={clsx('relative aspect-[16/9]')}>

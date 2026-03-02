@@ -33,7 +33,7 @@ export const MenuItemCard = ({item}: Props) => {
             type="button"
             className="group relative w-full sm:w-[260px] shrink-0 text-left
       overflow-hidden rounded-[18px] border border-white/10 bg-black/35
-      shadow-[0_8px_7px_rgba(0,0,0,0.65)] transition hover:border-white/15 cursor-pointer h-full flex flex-col "
+      shadow-[0_8px_7px_rgba(0,0,0,0.65)] transition hover:border-white/15 cursor-pointer h-full flex flex-col backdrop-blur-xs "
         >
             <div className="relative min-h-[260px] aspect-square w-full">
                 <Image
