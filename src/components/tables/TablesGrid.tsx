@@ -28,7 +28,7 @@ export const TablesGrid = () => {
                 <div className='text-red-400 text-xl'>*</div>
                 <div className='text-white/55'>{tByKey(dict, 'tables.tipNotice')}</div>
             </div>
-            <Section items={tables.slice(0, 2)} className="grid-cols-1 sm:grid-cols-2"/>
+            <Section items={tables.slice(0, 2)}  className="grid-cols-1 sm:grid-cols-2"/>
             <Section items={tables.slice(2)} className="grid-cols-1 sm:grid-cols-3"/>
         </div>
     );

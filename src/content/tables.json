@@ -4,7 +4,8 @@
     "smallDeposit": 300,
     "bigDeposit": 400,
     "hoursLimit": 4,
-    "personLimit": 8
+    "personLimit": 8,
+    "isDark": true
   },
   {
     "id": "game-zone",
@@ -31,6 +32,14 @@
   },
   {
     "id": "t5",
+    "personLimit": 4
+  },
+  {
+    "id": "t6",
+    "personLimit": 4
+  },
+  {
+    "id": "t7",
     "personLimit": 4
   }
 ]

@@ -4,4 +4,5 @@ export type TableCardData = {
     bigDeposit?: number;
     hoursLimit?: number;
     personLimit: number;
+    isDark?: boolean;
 }
