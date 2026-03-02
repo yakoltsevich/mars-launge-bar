@@ -48,19 +48,32 @@ export const MenuItemCard = ({item}: Props) => {
 
             <div className="p-3">
                 <div className="flex flex-wrap items-center justify-between gap-3">
-                    <div className="line-clamp-2 text-[16px] text-white/85">
-                        {tByKey(dict, item.nameKey)}
-                    </div>
-
-                    {item.price && (
-                        <div className="text-[15px] text-white/65">
-                            {item.price.amount} {item.price.currency}
+                    <div>
+                        <div className="line-clamp-2 text-[16px] text-white/85">
+                            {tByKey(dict, item.nameKey)}
                         </div>
-                    )}
+
+                        {item.volumeMl &&
+                            <div className="mt-1 text-xs text-[#CFA57A]/75">
+                                {item.volumeMl} ml
+                            </div>
+                        }
+                    </div>
+                   <div>
+
+                       {item.price && (
+                           <div className="text-[15px] text-white/65">
+                               {item.price.amount} {item.price.currency}
+                           </div>
+                       )}
+
+                   </div>
+
+
                 </div>
 
                 {item.descriptionKey && (
-                    <div className="mt-3 line-clamp-4 text-[13px] text-white/45">
+                    <div className="mt-1 line-clamp-4 text-[13px] text-white/45">
                         {tByKey(dict, item.descriptionKey)}
                     </div>
                 )}

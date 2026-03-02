@@ -640,7 +640,8 @@
     },
     "nameKey": "menu.items.amber.name",
     "isActive": true,
-    "order": 10
+    "order": 10,
+    "volumeMl": 500
   },
   {
     "id": "ksiazenice",
@@ -651,7 +652,8 @@
     },
     "nameKey": "menu.items.ksiazenice.name",
     "isActive": true,
-    "order": 20
+    "order": 20,
+    "volumeMl": 500
   },
   {
     "id": "cola",
@@ -660,6 +662,7 @@
       "amount": 12,
       "currency": "PLN"
     },
+    "volumeMl": 330,
     "nameKey": "menu.items.cola.name",
     "isActive": true,
     "order": 10
@@ -671,6 +674,7 @@
       "amount": 12,
       "currency": "PLN"
     },
+    "volumeMl": 330,
     "nameKey": "menu.items.sprite.name",
     "isActive": true,
     "order": 20
@@ -682,6 +686,7 @@
       "amount": 12,
       "currency": "PLN"
     },
+    "volumeMl": 330,
     "nameKey": "menu.items.fanta.name",
     "isActive": true,
     "order": 30
@@ -693,6 +698,7 @@
       "amount": 10,
       "currency": "PLN"
     },
+    "volumeMl": 300,
     "nameKey": "menu.items.cisowianka.name",
     "isActive": true,
     "order": 40
