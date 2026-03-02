@@ -4,7 +4,7 @@ import React, {ReactNode} from "react";
 
 export const HappeningsCard = ({children}: { children: ReactNode }) => {
     return (
-        <div className="group relative overflow-hidden w-full  shadow-[0_18px_70px_rgba(0,0,0,0.65)]">
+        <div className="group relative overflow-hidden w-full  shadow-[0_18px_70px_rgba(0,0,0,0.65)] rounded-[22px]">
             <div
                 className="relative overflow-hidden rounded-[22px] border border-white/10 bg-black/25 transition hover:border-white/15 ">
                 {/* background image */}
