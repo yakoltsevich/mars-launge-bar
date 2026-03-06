@@ -1,9 +1,9 @@
 import type {Metadata} from "next";
-import {CONTACT_DATA} from "@/components/contact/contactData";
 import {GoogleMapEmbed} from "@/components/contact/GoogleMapEmbed";
 import {PageProps} from "@/types/page";
 import {Contacts} from "@/components/contact/Contacts";
 import {MainPageWrapper} from "@/components/common/MainPageWrapper";
+import {getContactsInfo} from "@/lib/contacts";
 
 export async function generateMetadata({params}: PageProps): Promise<Metadata> {
     const {lang} = await params;
@@ -32,10 +32,11 @@ export async function generateMetadata({params}: PageProps): Promise<Metadata> {
 }
 
 export default function ContactPage({params}: PageProps) {
+    const contactsInfo = getContactsInfo()
     return (
         <MainPageWrapper>
             <Contacts/>
-            <GoogleMapEmbed query={CONTACT_DATA.mapQuery}/>
+            <GoogleMapEmbed query={contactsInfo.mapQuery}/>
         </MainPageWrapper>
     );
 }

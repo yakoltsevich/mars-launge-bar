@@ -20,6 +20,31 @@ export const generateStaticParams = async () => [{lang: "pl"}, {lang: "en"}];
 type MetadataProps = {
     params: Promise<{ lang: string }>;
 };
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    name: "The Mars Lounge Bar & Shisha",
+    url: "https://www.mars-lounge.bar",
+    address: {
+        "@type": "PostalAddress",
+        streetAddress: "Długie Ogrody 18/U6",
+        postalCode: "80-765",
+        addressLocality: "Gdańsk",
+        addressCountry: "PL",
+    },
+    telephone: "+48 508 601 414",
+    email: "marsbargdansk@gmail.com",
+    servesCuisine: [
+        "Cocktails",
+        "Mocktails",
+        "Shisha",
+        "Snacks",
+        "Coffee",
+        "Tea"
+    ],
+    priceRange: "$$",
+    sameAs: ["https://www.instagram.com/themars_bar_/"],
+}
 
 export async function generateMetadata({params}: MetadataProps): Promise<Metadata> {
     const {lang} = await params;
@@ -77,6 +102,10 @@ export default async function RootLayout({children, params}: LangLayoutProps) {
     return (
         <html lang={lang}>
         <body className={`${montserrat.className} antialiased`}>
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}}
+        />
         <I18nProvider dict={dict}>
             <Header/>
             {children}
