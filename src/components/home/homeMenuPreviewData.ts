@@ -4,17 +4,17 @@ export const HOME_MENU_PREVIEW_DATA = {
         {
             labelKey: "home.menuPreview.cards.bar",
             href: "/menu",
-            imageUrl: "/images/common/menu.jpg",
+            imageUrl: "/images/home/menuPreview/menu.jpg",
         },
         {
             labelKey: "home.menuPreview.cards.hookah",
             href: "/menu/shisha",
-            imageUrl: "/images/common/hookah.jpg",
+            imageUrl: "/images/home/menuPreview/hookah.jpg",
         },
         {
             labelKey: "home.menuPreview.cards.tables",
             href: "/tables",
-            imageUrl: "/images/common/tables.jpg",
+            imageUrl: "/images/home/menuPreview/tables.jpg",
         },
     ],
 };
