@@ -30,8 +30,6 @@ export const TableCard = ({item}: Props) => {
                     sizes="(min-width: 640px) 50%, 100vw"
                     className="object-cover opacity-90 transition duration-500"
                 />
-                {!item.isDark && <div
-                    className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.20),rgba(0,0,0,0.42))]"/>}
                 <div className="pointer-events-none absolute inset-2 rounded-[18px] border border-white/5"/>
             </div>
 

@@ -20,7 +20,7 @@ export const HomeIntro = () => {
             {/* Background */}
             <div className="absolute inset-0">
                 <Image
-                    src='/images/common/bar.jpg'
+                    src='/images/home/atmosphere.jpg'
                     alt=""
                     fill
                     sizes="(max-width: 768px) 100vw, 800px"

@@ -19,11 +19,13 @@ export const HomeAtmosphere = () => {
                 </div>
                 <AtmosphereSlider
                     slides={[
-                        {src: '/images/common/bar.jpg', alt: 'Mars lounge interior 1'},
-                        {src: '/images/common/bar2.jpg', alt: 'Mars lounge interior 2'},
-                        {src: '/images/common/outside.jpg', alt: 'Mars lounge interior 3'},
-                        {src: '/images/common/shisha.jpg', alt: 'Mars lounge interior 3'},
-                        {src: '/images/common/vip-room.jpg', alt: 'Mars lounge interior 3'},
+                        {src: '/images/home/atmosphere.jpg', alt: 'Mars lounge interior 1'},
+                        {src: '/images/home/atmosphere2.jpg', alt: 'Mars lounge interior 2'},
+                        {src: '/images/home/atmosphere3.jpg', alt: 'Mars lounge interior 3'},
+                        {src: '/images/home/atmosphere4.jpg', alt: 'Mars lounge interior 4'},
+                        {src: '/images/home/atmosphere5.jpg', alt: 'Mars lounge interior 5'},
+                        {src: '/images/home/atmosphere6.jpg', alt: 'Mars lounge interior 6'},
+                        {src: '/images/home/atmosphere7.jpg', alt: 'Mars lounge interior 7'},
                     ]}
                     className=" w-full max-w-full sm:w-1/2 sm:max-w-1/2"
                 />
