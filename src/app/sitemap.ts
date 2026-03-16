@@ -1,7 +1,8 @@
 import type {MetadataRoute} from 'next';
 import MENU_CATEGORIES from '@/content/menu/categories.json';
 
-const baseUrl = 'https://mars-launge-bar.vercel.app';
+const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.mars-lounge.bar';
 
 const locales = ['pl', 'en'];
 const staticPages = ['', 'menu', 'tables', 'happenings', 'contact'];
