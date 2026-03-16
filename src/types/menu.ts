@@ -1,5 +1,3 @@
-// src/types/menu.ts
-
 export type MenuCategory = {
     id: string;
     titleKey: string;

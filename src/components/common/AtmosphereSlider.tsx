@@ -20,6 +20,7 @@ type Props = {
 };
 
 export const AtmosphereSlider = ({slides, className}: Props) => {
+    const defColor = 'rgba(207,165,122,0.6)'
     return (
         <div className={className}>
             <Swiper
@@ -32,11 +33,11 @@ export const AtmosphereSlider = ({slides, className}: Props) => {
                 slidesPerView={1}
                 style={{
                     // стрелки
-                    '--swiper-navigation-color': '#CFA57A',
+                    '--swiper-navigation-color': defColor,
                     // активная точка
-                    '--swiper-pagination-color': '#CFA57A',
+                    '--swiper-pagination-color': defColor,
                     // неактивные точки
-                    '--swiper-pagination-bullet-inactive-color': '#CFA57A',
+                    '--swiper-pagination-bullet-inactive-color': defColor,
                     '--swiper-pagination-bullet-inactive-opacity': '0.35',
                 } as CSSProperties}
             >

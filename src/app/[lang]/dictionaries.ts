@@ -1,9 +1,7 @@
 import 'server-only';
 import { promises as fs } from 'fs';
 import path from 'path';
-
-export const locales = ['pl', 'en'] as const;
-export type Locale = typeof locales[number];
+import {Locale, locales} from "@/types/lang";
 
 export const hasLocale = (locale: string): locale is Locale =>
     (locales as readonly string[]).includes(locale);

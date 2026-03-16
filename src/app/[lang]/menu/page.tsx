@@ -7,7 +7,6 @@ import {tByKey} from "@/shared/helpers/tByKey";
 import {PageProps} from "@/types/page";
 import React from "react";
 import {MainPageWrapper} from "@/components/common/MainPageWrapper";
-import {MenuCategoryNav} from "@/components/menu/MenuCategoryNav";
 
 export async function generateMetadata({params}: PageProps): Promise<Metadata> {
     const {lang} = await params;
@@ -41,9 +40,7 @@ export default async function MenuPage({params}: PageProps) {
     const dict = await getDictionary(lang);
 
     return (
-        <MainPageWrapper className="!px-0 sm:px-4">
-            {/*<MenuCategoryNav categories={categories} lang={lang}/>*/}
-
+        <MainPageWrapper className="!px-0 sm:px-4 pt-32">
             {categories.map(category => {
                 if (!category.isActive) return null;
 

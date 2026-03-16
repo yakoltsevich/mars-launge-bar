@@ -4,8 +4,8 @@ import React, {useEffect, useMemo, useState} from 'react';
 import {usePathname} from 'next/navigation';
 import {AnimatePresence, motion} from 'framer-motion';
 
-import {NAV_LINKS} from './navLinks';
 import type {NavLink} from './navLinks';
+import {NAV_LINKS} from './navLinks';
 
 import {HeaderShell} from './HeaderShell';
 import {HeaderLogo} from './HeaderLogo';
@@ -13,7 +13,8 @@ import {DesktopNav} from './DesktopNav';
 import {MobileMenuButton} from './MobileMenuButton';
 import {MobileNavOverlay} from './MobileNavOverlay';
 import {MobileNavDrawer} from './MobileNavDrawer';
-import {withLang} from "@/shared/helpers/lang";
+import {getCurrentLocale, withLang} from "@/shared/helpers/lang";
+import {MenuCategoryNav} from "@/components/header/MenuCategoryNav";
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -72,18 +73,22 @@ export const Header = () => {
         return pathname === full || !!pathname?.startsWith(`${full}/`);
     };
 
+    const currentLocale = getCurrentLocale(pathname);
+    const isInMenu = pathname.includes('menu');
+
     const navWithLang = (href: string) => withLang(href, langPrefix)
     return (
         <header className="fixed left-0 top-0 z-50 w-full">
-            <div className="mx-auto max-w-5xl px-4 pt-4">
-                <HeaderShell>
+            <div className="mx-auto max-w-5xl pt-4 space-y-3">
+                <HeaderShell className='mx-4'>
                     <HeaderLogo href={withLang('', langPrefix)}/>
 
                     <div className="flex items-center gap-2 pr-2">
-                        <DesktopNav links={NAV_LINKS} withLang={navWithLang}/>
+                        <DesktopNav links={NAV_LINKS} navWithLang={navWithLang}/>
                         <MobileMenuButton isOpen={isOpen} onToggle={toggle}/>
                     </div>
                 </HeaderShell>
+                {isInMenu && <MenuCategoryNav lang={currentLocale}/>}
             </div>
 
             <AnimatePresence>

@@ -8,17 +8,17 @@ import {tByKey} from "@/shared/helpers/tByKey";
 
 type Props = {
     links: NavLink[];
-    withLang: (href: string) => string;
+    navWithLang: (href: string) => string;
 };
 
-export const DesktopNav = ({links, withLang}: Props) => {
+export const DesktopNav = ({links, navWithLang}: Props) => {
     const dict = useDict();
     return (
         <nav className="hidden items-center gap-1 md:flex">
             {links.map((l) => (
                 <Link
                     key={l.href}
-                    href={withLang(l.href)}
+                    href={navWithLang(l.href)}
                     className="rounded-xl px-3 py-2 text-[12px] tracking-[0.18em] uppercase
             text-white/70 hover:text-white hover:bg-white/5 transition"
                 >

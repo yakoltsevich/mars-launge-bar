@@ -3,8 +3,8 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
-
-type Locale = 'pl' | 'en';
+import {Locale, locales} from "@/types/lang";
+import {buildLocalePath, getCurrentLocale} from "@/shared/helpers/lang";
 
 type LocaleSwitchItemProps = {
     locale: Locale;
@@ -52,11 +52,6 @@ const LocaleSwitchItem = ({locale, isActive, href}: LocaleSwitchItemProps) => {
     );
 };
 
-const getCurrentLocale = (pathname: string): Locale =>
-    pathname.startsWith('/en') ? 'en' : 'pl';
-
-const buildLocalePath = (pathname: string, locale: Locale) =>
-    pathname.replace(/^\/(pl|en)/, `/${locale}`);
 
 export const LocaleSwitcher = () => {
     const pathname = usePathname();
@@ -72,7 +67,7 @@ export const LocaleSwitcher = () => {
             )}
         >
             <div className="grid h-full w-full grid-cols-2 gap-0.5">
-                {(['pl', 'en'] as const).map((locale) => (
+                {locales.map((locale) => (
                     <LocaleSwitchItem
                         key={locale}
                         locale={locale}

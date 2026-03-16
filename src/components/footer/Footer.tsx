@@ -20,7 +20,7 @@ export const Footer = () => {
                 <Link
                     href={withLang('', langPrefix)}
                     className="flex items-center gap-3 text-white/90 hover:text-white transition"
-                    aria-label="На главную"
+                    aria-label="Home"
                 >
                     <span
                         className="h-2 w-2 rounded-full bg-red-500/90 shadow-[0_0_14px_rgba(239,68,68,0.35)]"

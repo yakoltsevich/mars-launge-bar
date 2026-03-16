@@ -11,7 +11,7 @@ const WEEK_DAYS_INDEX: Record<string, number> = {
 };
 
 export const getNearestDay = (items: SpecialsData[]): SpecialsData => {
-    const todayIndex = new Date().getDay(); // 0..6 (sun..sat)
+    const todayIndex = new Date().getDay();
 
     const withDistance = items
         .map((item) => {

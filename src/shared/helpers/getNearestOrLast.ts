@@ -6,7 +6,6 @@ const startOfTodayLocalTs = (now = new Date()) => {
     return d.getTime();
 };
 
-// "2026-02-12" -> timestamp (UTC 12:00 to avoid DST edge-cases)
 const dateToTs = (isoDate: string | null | undefined) => {
     if (!isoDate) return null;
 

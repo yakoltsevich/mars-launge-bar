@@ -15,7 +15,6 @@ const FALLBACK_URL =
 
 export const MenuItemCard = ({item}: Props) => {
     const dict = useDict();
-    // Важно: без "/public"
     const imageSrc = useMemo(
         () => `/images/menu/${item.categoryId}/${item.id}.png`,
         [item.categoryId, item.id]
@@ -23,7 +22,6 @@ export const MenuItemCard = ({item}: Props) => {
 
     const [src, setSrc] = useState<string>(imageSrc);
 
-    // если item поменялся (карточка переиспользована), обновим src
     React.useEffect(() => {
         setSrc(imageSrc);
     }, [imageSrc]);
@@ -31,9 +29,9 @@ export const MenuItemCard = ({item}: Props) => {
     return (
         <button
             type="button"
-            className="group relative w-full sm:w-[260px] shrink-0 text-left
-      overflow-hidden rounded-[18px] border border-white/10 bg-black/35
-      shadow-[0_8px_7px_rgba(0,0,0,0.65)] transition hover:border-white/15 cursor-pointer h-full flex flex-col backdrop-blur-xs "
+            className="group relative w-full sm:w-[260px] shrink-0 text-left overflow-hidden rounded-[18px] border
+            border-white/10 bg-black/35 shadow-[0_8px_7px_rgba(0,0,0,0.65)] transition hover:border-white/15
+             h-full flex flex-col backdrop-blur-xs"
         >
             <div className="relative min-h-[260px] aspect-square w-full">
                 <Image
@@ -53,23 +51,17 @@ export const MenuItemCard = ({item}: Props) => {
                             {tByKey(dict, item.nameKey)}
                         </div>
 
-                        {item.volumeMl &&
+                        {item.volumeMl && (
                             <div className="mt-1 text-xs text-[#CFA57A]/75">
                                 {item.volumeMl} ml
                             </div>
-                        }
+                        )}
                     </div>
-                   <div>
-
-                       {item.price && (
-                           <div className="text-[15px] text-white/65">
-                               {item.price.amount} {item.price.currency}
-                           </div>
-                       )}
-
-                   </div>
-
-
+                    {item.price && (
+                        <div className="text-[15px] text-white/65">
+                            {item.price.amount} {item.price.currency}
+                        </div>
+                    )}
                 </div>
 
                 {item.descriptionKey && (

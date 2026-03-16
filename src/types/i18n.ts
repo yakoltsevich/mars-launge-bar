@@ -1,5 +1,3 @@
-// src/types/i18n.ts
-
 export type MenuDictionary = {
     menu: {
         brand: string;

@@ -26,7 +26,6 @@ export const HomeMenuPreview = () => {
                         href={withLang(it.href, langPrefix)}
                         className="group relative overflow-hidden rounded-[22px] border border-white/10 bg-black/25
                 shadow-[0_18px_70px_rgba(0,0,0,0.65)] transition hover:border-white/15">
-                        {/* background image */}
                         <div className="absolute inset-0">
                             <Image
                                 src={it.imageUrl}
@@ -35,13 +34,10 @@ export const HomeMenuPreview = () => {
                                 alt=""
                                 className="object-contain opacity-90 transition duration-500"
                             />
-                            {/* dark overlay */}
-                            {/* vignette */}
                             <div
                                 className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.10),rgba(0,0,0,0.92))]"/>
                         </div>
 
-                        {/* content */}
                         <div className="relative flex h-[270px] items-end p-5">
                             <div className="w-full">
                                 <div className="text-[20px] tracking-[0.12em] text-white/85">
@@ -51,7 +47,6 @@ export const HomeMenuPreview = () => {
                             </div>
                         </div>
 
-                        {/* inner stroke */}
                         <div className="pointer-events-none absolute inset-2 rounded-[18px] border border-white/5"/>
                     </Link>
                 ))}

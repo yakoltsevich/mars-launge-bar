@@ -1,3 +1,5 @@
+import {Locale} from "@/types/lang";
+
 export type PageProps = {
-    params: Promise<{ lang: 'pl' | 'en' }>;
+    params: Promise<{ lang: Locale }>;
 };

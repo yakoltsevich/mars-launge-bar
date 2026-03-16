@@ -1,28 +1,9 @@
 'use client'
-import {DirectionalLink} from "@/components/common/DirectionalLink";
 import {useDict} from "@/components/i18n/I18nProvider";
 import {tByKey} from "@/shared/helpers/tByKey";
 import React from "react";
 import clsx from "clsx";
-import {isToday} from "@/shared/helpers/isToday";
 
-
-type EventData = {
-    id: string;      // "FRI, 06 FEB"
-    date: string;          // "Mafia Night"
-    timePeriod?: string;     // "20:00 – 23:00"
-};
-
-type PromoData = {
-    id: string;        // "THURSDAY"
-    day: string;           // "-50% first cocktail"
-};
-
-type Props = {
-    className?: string;
-    events: EventData[];
-    specials: PromoData[];
-};
 
 type HappeningsCardContentProps = {
     isToday?: boolean | undefined;
@@ -32,7 +13,6 @@ type HappeningsCardContentProps = {
     meta?: string | null;
     description?: string;
 };
-
 export const HappeningsCardContent = ({
                                           date,
                                           dayKey,
@@ -78,8 +58,7 @@ export const HappeningsCardContent = ({
 
             {/* corner glow */}
             <div
-                className={clsx("pointer-events-none absolute -right-16 " +
-                    "-top-16 h-44 w-44 rounded-full blur-3xl bg-[#B77A45]/18")}
+                className={clsx("pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full blur-3xl bg-[#B77A45]/18")}
             />
         </div>
     );

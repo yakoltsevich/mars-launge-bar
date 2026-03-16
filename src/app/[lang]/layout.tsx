@@ -9,6 +9,7 @@ import {getDictionary, hasLocale} from "@/app/[lang]/dictionaries";
 import {config} from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 config.autoAddCss = false;
 
@@ -107,6 +108,7 @@ export default async function RootLayout({children, params}: LangLayoutProps) {
             dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}}
         />
         <I18nProvider dict={dict}>
+            <Analytics/>
             <Header/>
             {children}
             <Footer/>

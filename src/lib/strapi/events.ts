@@ -10,6 +10,5 @@ export const getEvents = async (locale: StrapiLocale, sort = 'date:asc') => {
         {next: {tags: [`events:${locale}`]}}
     )
 
-    // только published (на всякий случай)
     return res.data.filter((e) => e.publishedAt)
 }
